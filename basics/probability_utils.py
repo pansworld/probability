@@ -14,7 +14,7 @@ import itertools;
 #PERFORM INGERENCE or comphte the conditional disributions p(Xi | X1=x1, ...Xm = Xm)
 #List of events List(list(event1), list(event2)) Example: [[1,2,3,4,5,6]] or [[1,2,3,4,5,6],[1,2,3,4,5,6]]
 
-class ProbablisticModelClass():
+class ProbablisticUtilClass():
     def __init__(self, events):
         self.outcome_space = list(itertools.product(*events))
         self.outcome_space_probs = self.find_outcome_space_probabilities(self.outcome_space)
@@ -140,7 +140,7 @@ print(f'Are events independent: {dice_exp.are_events_independent(dice_C1, dice_C
 
 #Get probs for two dice
 dice = [[1,2,3,4,5,6],[1,2,3,4,5,6]]
-dice_exp = ProbablisticModelClass(dice)
+dice_exp = ProbablisticUtilClass(dice)
 print(dice_exp.outcome_space)
 
 #Intersection Probabilities for two events
