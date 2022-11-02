@@ -121,10 +121,17 @@ class ProbablisticUtilClass():
     '''
     Get the entropy given a list of probabilities and returns a list of entropies
     '''
-    def get_entropy(self, probabilities):
+    def get_individual_entropy(self, probabilities):
         entropy = -probabilities*np.log(probabilities)
         return entropy
 
+    '''
+    Get cross entropy given actual and predicted probabilities
+    Inputs: Numpy Arrays of predicted and actula probabilities
+    '''
+    def get_cross_entropy(self, predicted_probabilities, actual_probabilities):
+        cross_entropy = -actual_probabilities*np.log(np.clip(predicted_probabilities,1e-12,1))
+        return np.sum(cross_entropy)
 
 '''
 #Get probs for coin toss
@@ -149,8 +156,6 @@ dice_C1=[(1,)]
 dice_C2=[(2,)]
 print(f'Are events independent: {dice_exp.are_events_independent(dice_C1, dice_C2)}')
 
-
-
 #Get probs for two dice
 dice = [[1,2,3,4,5,6],[1,2,3,4,5,6]]
 dice_exp = ProbablisticUtilClass(dice)
@@ -166,13 +171,39 @@ print(f'Are events independent: {dice_exp.are_events_independent(dice_C1, dice_C
 
 
 dice_C1=[(1,1)]
-dice_C2=[(2,1)]
+dice_C2=[(2,1),(3,1)]
 print(f'Probability of Events: C1={dice_exp.prob_of_event(dice_C1)} C2={dice_exp.prob_of_event(dice_C2)}')
 print(f'Are events independent: {dice_exp.are_events_independent(dice_C1, dice_C2)}')
+prob_c1 = dice_exp.prob_of_event(dice_C1)
+prob_c2 = dice_exp.prob_of_event(dice_C2)
+print(f'Cross Entropy: {dice_exp.get_individual_entropy(np.array([prob_c1, prob_c2]))}')
 
 '''
-dice_C1=[(1,1)]
-prob=np.array([dice_exp.prob_of_event(dice_C1)])
-print(prob)
-print(dice_exp.get_entropy(prob))
+Cross-entropy
 '''
+predicted_probabilities=np.array([0.1,0.5,0.3,0.1])
+actual_probabilities=np.array([0.5,0.1,0.1,0.3])
+print(f'Cross Entropy (Flipped probs): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
+
+predicted_probabilities=np.array([0.3,0.2,0.1,0.2])
+actual_probabilities=np.array([0.5,0.1,0.1,0.3])
+print(f'Cross Entropy (Closer): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
+
+predicted_probabilities=np.array([0.5,0.1,0.1,0.3])
+actual_probabilities=np.array([0.5,0.1,0.1,0.3])
+print(f'Cross Entropy (Equal - Best case): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
+
+'''
+Categorical cross-entropy
+'''
+predicted_probabilities=np.array([0.5,0.1,0.1,0.3])
+actual_probabilities=np.array([0,1.0,0.0,0.0])
+print(f'Categorical Cross Entropy (Wrong Category): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
+
+predicted_probabilities=np.array([0.0,0.9,0.05,0.05])
+actual_probabilities=np.array([0,1.0,0.0,0.0])
+print(f'Categorical Cross Entropy (Close to category): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
+
+predicted_probabilities=np.array([0.0,1.0,0,0])
+actual_probabilities=np.array([0,1.0,0.0,0.0])
+print(f'Categorical Cross Entropy (Matches category): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
