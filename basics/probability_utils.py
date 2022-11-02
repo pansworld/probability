@@ -3,6 +3,10 @@ import numpy as np;
 import itertools;
 import math;
 
+#Definition
+#Val(X) = set D of all values assumed by X
+#|Val(X)| = Number of elements in set D that contains all values assumed by X
+
 #Stage 1
 #REPRESENT the world as a collection of random variables X1, X2,...Xn with joint distrbution P(X1,X2, ...Xn)
 
@@ -28,6 +32,7 @@ class ProbablisticUtilClass():
     #p(E) = sigma p(w) where w is the outcome in that Event
     #Inputs: Samples = Array of outcome_space
     #Outputs: outcome_space_probabilities = Names array of probabilities
+    
     '''
     Find the outcome space probabilities
     Input: List of Outcome Space
@@ -43,9 +48,6 @@ class ProbablisticUtilClass():
         
         for i in outcome_space_counts:
             outcome_space_counts[i]=outcome_space_counts[i]/len(outcome_space)
-        
-
-        #print(f'Outcome Space Probabilities = {outcome_space_counts}')
         
         return outcome_space_counts
             
@@ -96,8 +98,8 @@ class ProbablisticUtilClass():
         for i in union_of_outcomes:
            union_probs=union_probs + self.outcome_space_probs[i]
 
-
         return union_probs
+
 
     #Independence of events
     #Two events are independent if p(A intersection B)=p(A)p(B)
@@ -117,12 +119,25 @@ class ProbablisticUtilClass():
         return independence
     
 
+    '''
+    Determine the conditional probability of A given B
+    Inputs calculate A and B are events
+    '''
+    def get_conditional_probability(self, A, B):
+        #Get the intersection probability
+        #Get the C1 probability
+        #divide the two
+        conditional_probability = self.prob_of_intersection(A, B)/self.prob_of_event(B)
+
+        return conditional_probability
+
     #Entropy of events
     '''
     Get the entropy given a list of probabilities and returns a list of entropies
     '''
     def get_individual_entropy(self, probabilities):
         entropy = -probabilities*np.log(probabilities)
+        
         return entropy
 
     '''
@@ -131,6 +146,7 @@ class ProbablisticUtilClass():
     '''
     def get_cross_entropy(self, predicted_probabilities, actual_probabilities):
         cross_entropy = -actual_probabilities*np.log(np.clip(predicted_probabilities,1e-12,1))
+        
         return np.sum(cross_entropy)
 
 '''
@@ -168,7 +184,8 @@ print(f'Probability of Events: C1={dice_exp.prob_of_event(dice_C1)} C2={dice_exp
 print(f'Probability of Intersection: {dice_exp.prob_of_intersection(dice_C1, dice_C2)}')
 print(f'Probability of Union: {dice_exp.prob_of_union(dice_C1, dice_C2)}')
 print(f'Are events independent: {dice_exp.are_events_independent(dice_C1, dice_C2)}')
-
+print(f'Conditional Probability C1 given C2: {dice_exp.get_conditional_probability(dice_C1, dice_C2)}')
+print(f'Conditional Probability C2 given C1: {dice_exp.get_conditional_probability(dice_C2, dice_C1)}')
 
 dice_C1=[(1,1)]
 dice_C2=[(2,1),(3,1)]
@@ -207,3 +224,4 @@ print(f'Categorical Cross Entropy (Close to category): {dice_exp.get_cross_entro
 predicted_probabilities=np.array([0.0,1.0,0,0])
 actual_probabilities=np.array([0,1.0,0.0,0.0])
 print(f'Categorical Cross Entropy (Matches category): {dice_exp.get_cross_entropy(predicted_probabilities,actual_probabilities)}')
+
