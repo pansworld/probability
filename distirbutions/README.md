@@ -32,7 +32,7 @@ Variable that captures the amount of rainfall.
 Have the following properties:
 1. The CDF is described as
 $$F(x)=P(X \le x) = \sum_{x_i \le x} P(X=x_i)$$
-2. They are described by a PDF
+2. They are described by a **Probability Mass Function**
 $$f(x_j) = P(X = x_j)$$
 $$0 \le f(x_j) \le 1$$
 $$\sum_{j}f(x_j)=1$$
@@ -41,9 +41,32 @@ $$\sum_{j}f(x_j)=1$$
 #### Continuous Distributions
 1. The CDF is described as
 $$F(x)=\int_{-\infty}^{x}f(y)dy$$
-2. They are described by a **Probability Mass Function**
+2. They are described by a **Probability Density Function**
 $$f(x) = dF/dx$$
 $$\int_{-\infty}^{\infty}f(x)dx=1$$
 $$f(x) \ge 0$$
 
-## Common Distributions and Properties
+## General Properties of Distributions
+#### Expectation, moment and characteristic function
+
+#### Variance
+
+#### Standard Deviation
+
+
+## Common Distribution Types
+#### Bernoulli (Discrete)
+
+#### Poisson (Discrete)
+
+#### Uniform (Continuous)
+
+#### Normal or Gaussian (Continuous)
+
+#### Student's T-Distribution (Continuous)
+
+#### Chi-Squared (Continuous)
+
+## Resources
+1. [Probabilities and Statistics refresher](https://stanford.edu/~shervine/teaching/cs-229/refresher-probabilities-statistics)
+2. [Statistics cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-statistics)
