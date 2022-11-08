@@ -1,24 +1,49 @@
 # Study in Distributions
 A probability distribution of a random variable X is the set of probabilities assigned to each possible value of X.
 
-## Discrete vs. Continuous
-### Discrete Random Variables
-Variables that take distinct values. Example: Variable that captures the ddice roll takes values 1 through 6.
-
-### Continuous Random Variables
-Variables that take any value within a range. Example: Variable that captures the amounr of rainfill.
-
 ## Probability Distribution Function vs. Cumulative Distribution Function
 
-### Probability Distribution Fuction
-The probability density function $f(x)$ is the probability that $X$ takes on values between two adjacent realizations of the random variable.
+#### Probability Distribution Fuction (PDF)
+1. The probability density function $f(x)$ is the probability that $X$ takes on values between two adjacent realizations of the random variable.
+2. Focuses on one specific value
 
-### Cumulative Distribution Function
-1. Monotonically non-decreasing function (Function that may be flat in some ranges and increasing in others)
+#### Cumulative Distribution Function (CDF)
+1. Monotonically non-decreasing function (Function that may be flat in some ranges and increasing in others but never decreasing)
 2. such that $\lim_{x\to-\infty} f(x) = 0$ and $\lim_{x\to\infty} f(x) = 1$
 3. Defined as $F(x) = P(X \le x)$
+4. Focuses on a sum or integral of values
+
+## Discrete vs. Continuous
+Distributions are based on two types of random variables.
+
+**Discrete Random Variables**
+Variables that take distinct values. 
+```
+Variable that captures the outcome of a dice roll (1 through 6).
+```
+
+**Continuous Random Variables**
+Variables that take any value within a range. 
+```
+Variable that captures the amount of rainfall.
+```
+
+#### Discrete Distributions
+Have the following properties:
+1. The CDF is described as
+$$F(x)=P(X \le x) = \sum_{x_i \le x} P(X=x_i)$$
+2. They are described by a PDF
+$$f(x_j) = P(X = x_j)$$
+$$0 \le f(x_j) \le 1$$
+$$\sum_{j}f(x_j)=1$$
 
 
-## Discrete Distributions
+#### Continuous Distributions
+1. The CDF is described as
+$$F(x)=\int_{-\infty}^{x}f(y)dy$$
+2. They are described by a **Probability Mass Function**
+$$f(x) = dF/dx$$
+$$\int_{-\infty}^{\infty}f(x)dx=1$$
+$$f(x) \ge 0$$
 
-## Continuous Distributions
+## Common Distributions and Properties
