@@ -48,6 +48,15 @@ $$f(x) \ge 0$$
 
 ## General Properties of Distributions
 #### Moment of distributions
+A “moment” refers to how probability mass is distributed. General moment formula:
+
+$$
+E[X^k] = \sum_{i=1}^{n} x_i^k f(x_i)
+$$
+
+$$
+E[X^k] = \int_{-\infty}^{\infty} x^k f(x) dx
+$$
 
 #### Expectation and mean
 
