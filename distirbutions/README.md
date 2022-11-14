@@ -48,7 +48,7 @@ $$f(x) \ge 0$$
 
 ## General Properties of Distributions
 #### Moment of distributions
-A “moment” refers to how probability mass is distributed. General moment formula:
+A “moment” refers to how probability mass is distributed. General moment formula for discrete and continuous:
 
 $$
 E[X^k] = \sum_{i=1}^{n} x_i^k f(x_i)
@@ -59,6 +59,7 @@ E[X^k] = \int_{-\infty}^{\infty} x^k f(x) dx
 $$
 
 #### Expectation and mean
+Mean is the first moment of the distribution.
 
 #### Variance
 
@@ -83,3 +84,4 @@ $$
 ## Resources
 1. [Probabilities and Statistics refresher](https://stanford.edu/~shervine/teaching/cs-229/refresher-probabilities-statistics)
 2. [Statistics cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-statistics)
+3. [Understanding Moment](https://gregorygundersen.com/blog/2020/04/11/moments/)
