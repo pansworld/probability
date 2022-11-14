@@ -47,11 +47,15 @@ $$\int_{-\infty}^{\infty}f(x)dx=1$$
 $$f(x) \ge 0$$
 
 ## General Properties of Distributions
-#### Expectation, moment and characteristic function
+#### Moment of distributions
+
+#### Expectation and mean
 
 #### Variance
 
 #### Standard Deviation
+
+#### Characteristic function (Fourier transform)
 
 
 ## Common Distribution Types
