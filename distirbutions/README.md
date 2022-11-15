@@ -68,7 +68,7 @@ $$
 E[X^k] = \int_{-\infty}^{\infty} x^k f(x) dx
 $$
 
-#### Expectation and mean
+#### Expectation and mean $(\mu)$
 Mean is the **raw** first $(k=1)$ moment of the distribution. Or it represents the distance at which the center of mass of the distribution is located.
 
 $$
@@ -79,12 +79,13 @@ $$
 E[X] = \int_{-\infty}^{\infty} x f(x) dx
 $$
 
-#### Variance
+#### Variance $(\sigma^2)$
 Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution.
 
 | <img src="https://github.com/pansworld/probability/blob/1dc0aa73349b4dc47af3dccdf3a8bc5e4604f91a/distirbutions/images/normal_with_diff_variances.png" width="50%" height="50%"> | 
 |:--:| 
-| *Shows normal distribution with variances of 1, 0.5 and 0.33. The distribution with 0.33 variance is more compact and 1.0 is spread out.* |
+| Shows normal distribution with standard deviation $(\sigma)$ of 1, 0.5 and 0.33. The distribution with 0.33 $(\sigma)$ is more compact and 1.0 is spread out. |
+
 
 Variance is calculated as
 
@@ -118,7 +119,12 @@ $$
 Var(X) = E[X^2] - (E[X])^2
 $$
 
-#### Standard Deviation
+#### Standard Deviation $(\sigma)$
+Standard deviation is another measure of the spread of the distribution that is compatible with the units of the random variable X. It is defined as:
+
+$$
+\sigma = \sqrt{Var(X)}
+$$
 
 #### Characteristic function (Fourier transform)
 
