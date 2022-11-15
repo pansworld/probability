@@ -48,7 +48,17 @@ $$f(x) \ge 0$$
 
 ## General Properties of Distributions
 #### Moment of distributions
-A “moment” refers to how probability mass is distributed. General moment formula for discrete and continuous:
+A “moment” refers to how probability mass is distributed. Moments quantify three parameters of distributions: location (where is the mean), shape (what is the geometry: bimodal, asymmetric, heavy tailed etc.), and scale (what is the spread or variance). The **$k^{th}$ central moment** about the mean $\mu_x$ for a random variable X can be written as:
+
+$$
+E[(X - \mu_x)^k] = \sum_{i=1}^{n} (x_i - \mu_x)^k f(x_i)
+$$
+
+$$
+E[(X - \mu_x)^k] = \int_{-\infty}^{\infty} (x - \mu_x)^k f(x) dx
+$$
+
+A **raw moment** is the $k^{th}$ moment for a random variable X whose mean $\mu_x = 0$ 
 
 $$
 E[X^k] = \sum_{i=1}^{n} x_i^k f(x_i)
