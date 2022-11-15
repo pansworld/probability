@@ -69,7 +69,7 @@ E[X^k] = \int_{-\infty}^{\infty} x^k f(x) dx
 $$
 
 #### Expectation and mean
-Mean is the raw first ($k = 1$) moment of the distribution. Or it represents the distance at which the center of mass of the distribution is located.
+Mean is the **raw** first $(k=1)$ moment of the distribution. Or it represents the distance at which the center of mass of the distribution is located.
 
 $$
 E[X] = \sum_{i=1}^{n} x_i f(x_i)
@@ -81,6 +81,7 @@ $$
 
 
 #### Variance
+Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution. Higher variance means the 
 
 #### Standard Deviation
 
