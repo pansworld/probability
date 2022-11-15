@@ -96,10 +96,12 @@ $$
 Var(X) = E[(X - \mu_x)^2] = \int_{-\infty}^{\infty} (x - \mu_x)^2 f(x) dx
 $$
 
-Variance is also calculated as
+Variance can also be defined in terms of Expectations
+
 $$
 Var(X) = E[(X - E[X])^2] 
 $$
+
 $$
 Var(X) = E[X^2 - 2XE[X] - (E[X])^2]
 $$
