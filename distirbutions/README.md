@@ -69,7 +69,16 @@ E[X^k] = \int_{-\infty}^{\infty} x^k f(x) dx
 $$
 
 #### Expectation and mean
-Mean is the first moment of the distribution.
+Mean is the raw first ($k = 1$) moment of the distribution. Or it represents the distance at which the center of mass of the distribution is located.
+
+$$
+E[X] = \sum_{i=1}^{n} x_i f(x_i)
+$$
+
+$$
+E[X] = \int_{-\infty}^{\infty} x f(x) dx
+$$
+
 
 #### Variance
 
