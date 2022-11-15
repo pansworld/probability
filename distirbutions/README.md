@@ -82,7 +82,7 @@ $$
 #### Variance
 Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution.
 
-| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
+| ![Distribution with different variances](https://github.com/pansworld/probability/blob/1dc0aa73349b4dc47af3dccdf3a8bc5e4604f91a/distirbutions/images/normal_with_diff_variances.png) | 
 |:--:| 
 | *Shows normal distribution with variances of 1, 0.5 and 0.33. The distribution with 0.33 variance is more compact and 1.0 is spread out.* |
 
