@@ -81,7 +81,7 @@ $$
 
 
 #### Variance
-Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution. Higher variance means the 
+Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution.
 
 #### Standard Deviation
 
