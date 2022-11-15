@@ -86,6 +86,36 @@ Variance is the second **central** $(k=2)$ moment of the distribtion. It represe
 |:--:| 
 | *Shows normal distribution with variances of 1, 0.5 and 0.33. The distribution with 0.33 variance is more compact and 1.0 is spread out.* |
 
+Variance is calculated as
+
+$$
+Var(X) = E[(X - \mu_x)^2] = \sum_{i=1}^{n} (x_i - \mu_x)^2 f(x_i)
+$$
+
+$$
+Var(X) = E[(X - \mu_x)^2] = \int_{-\infty}^{\infty} (x - \mu_x)^2 f(x) dx
+$$
+
+Variance is also calculated as
+$$
+Var(X) = E[(X - E[X])^2] 
+$$
+$$
+Var(X) = E[X^2 - 2XE[X] - (E[X])^2]
+$$
+
+$$
+Var(X) = E[X^2] - E[2XE[X]] - E[(E[X])^2]
+$$
+
+$$
+Var(X) = E[X^2] - 2E[X]E[X] - (E[X])^2]
+$$
+
+$$
+Var(X) = E[X^2] - (E[X])^2
+$$
+
 #### Standard Deviation
 
 #### Characteristic function (Fourier transform)
