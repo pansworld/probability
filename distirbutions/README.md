@@ -79,9 +79,12 @@ $$
 E[X] = \int_{-\infty}^{\infty} x f(x) dx
 $$
 
-
 #### Variance
 Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution.
+
+| ![space-1.jpg](http://www.storywarren.com/wp-content/uploads/2016/09/space-1.jpg) | 
+|:--:| 
+| *Shows normal distribution with variances of 1, 0.5 and 0.33. The distribution with 0.33 variance is more compact and 1.0 is spread out.* |
 
 #### Standard Deviation
 
