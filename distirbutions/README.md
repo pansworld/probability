@@ -129,11 +129,28 @@ $$
 #### Skewness
 The third **central** moment $(k=2)$ gives a measure of the skewness of the distribution. A distribution can be positively skewed or negatively skewed as shown below: Positively skewed (or right skewed) has values clustered around the left tail of the distribution whereas a negatively skewed (or left skewed) has values clustered around the right tail of the distribution. Probabilities taper off for higher values (positive), taper off for lower values (negative) and the extreme values are found either on the right or the left of the peak.
 
+| <img src="https://github.com/pansworld/probability/blob/359fc15f0533888caeb0f54c21ea168a55f5dd24/distirbutions/images/positive_negative_skewed.png" width="50%" height="50%"> | 
+|:--:| 
+| Shows negatively and positively skewed distribution. |
+
+Extreme skewness is not desireable and hence there are statistical methods to reduce the skewness:
 
 
+| Positively Skewed | Negatively Skewed |
+|:--:|:------:|
+| Square Root | Squares |
+| Cube Root | Cubes |
+| Logarithms | Higher Powers |
 
-Extreme skewness is not desireable and hence there are statistical methods to reduce the skewness.
+Skewness is calculated as
 
+$$
+E[(X - \mu_x)^3] = \sum_{i=1}^{n} (x_i - \mu_x)^3 f(x_i)
+$$
+
+$$
+E[(X - \mu_x)^3] = \int_{-\infty}^{\infty} (x - \mu_x)^3 f(x) dx
+$$
 
 #### Characteristic function (Fourier transform)
 
@@ -155,3 +172,4 @@ Extreme skewness is not desireable and hence there are statistical methods to re
 1. [Probabilities and Statistics refresher](https://stanford.edu/~shervine/teaching/cs-229/refresher-probabilities-statistics)
 2. [Statistics cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-statistics)
 3. [Understanding Moment](https://gregorygundersen.com/blog/2020/04/11/moments/)
+4. [Data Skewness Reducing Techniques](https://www.kaggle.com/getting-started/110134)
