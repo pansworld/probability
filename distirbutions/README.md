@@ -129,7 +129,7 @@ $$
 ### Skewness
 The third **central** moment $(k=3)$ gives a measure of the skewness of the distribution. A distribution can be positively skewed or negatively skewed as shown below: Positively skewed (or right skewed) has values clustered around the left tail of the distribution whereas a negatively skewed (or left skewed) has values clustered around the right tail of the distribution. Probabilities taper off for higher values (positive), taper off for lower values (negative) and the extreme values are found either on the right or the left of the peak.
 
-| <img src="https://github.com/pansworld/probability/blob/359fc15f0533888caeb0f54c21ea168a55f5dd24/distirbutions/images/positive_negative_skewed.png" width="50%" height="50%"> | 
+| <img src="https://github.com/pansworld/probability/blob/359fc15f0533888caeb0f54c21ea168a55f5dd24/distirbutions/images/positive_negative_skewed.png" width="100%" height="100%"> | 
 |:--:| 
 | Shows negatively and positively skewed distribution. |
 
