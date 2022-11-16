@@ -126,6 +126,15 @@ $$
 \sigma = \sqrt{Var(X)}
 $$
 
+#### Skewness
+The third **central** moment $(k=2)$ gives a measure of the skewness of the distribution. A distribution can be positively skewed or negatively skewed as shown below: Positively skewed (or right skewed) has values clustered around the left tail of the distribution whereas a negatively skewed (or left skewed) has values clustered around the right tail of the distribution. Probabilities taper off for higher values (positive), taper off for lower values (negative) and the extreme values are found either on the right or the left of the peak.
+
+
+
+
+Extreme skewness is not desireable and hence there are statistical methods to reduce the skewness.
+
+
 #### Characteristic function (Fourier transform)
 
 
