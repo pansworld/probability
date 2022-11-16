@@ -151,7 +151,12 @@ $$
 E[((X - \mu_x)/\sigma_x)^3] = \int_{-\infty}^{\infty} ((x - \mu_x)/\sigma_x)^3 f(x) dx
 $$
 
-Here standard score or **Z-score** is also defined as $(X - \mu_x)/\sigma_x$ How does it measure skewness?
+Here standard score or **Z-score** is also defined as $(X - \mu_x)/\sigma_x$ 
+
+**How does it measure skewness?**
+A standard score or z-score of a point close to $\mu_x$ will have a small value where as a data point farther away from $\mu$ will have a larger value. When the difference is cubed, it preserves the +ve and -ve signs of the difference and it makes small values smaller and large values comparatively larger. Summing up all the standard scores gives us the overall +ve or -ve tendency of the z-scores (or skewness). A normal distribution with no skewness will have a skewness value of zero. 
+
+Note: Skewness is **not** a test of symmetry. Asymmetric distributions can have zero skewness. But Symmetric distributions always have zero skewness.
 
 ### Kurtosis
 The fourth **central** moment  $(k=4)$ gives a measure of peakeness of the distribution.
