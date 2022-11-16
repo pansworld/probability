@@ -3,11 +3,11 @@ A probability distribution of a random variable X is the set of probabilities as
 
 ## Probability Distribution Function vs. Cumulative Distribution Function
 
-#### Probability Distribution Fuction (PDF)
+### Probability Distribution Fuction (PDF)
 1. The probability density function $f(x)$ is the probability that $X$ takes on values between two adjacent realizations of the random variable.
 2. Focuses on one specific value
 
-#### Cumulative Distribution Function (CDF)
+### Cumulative Distribution Function (CDF)
 1. Monotonically non-decreasing function (Function that may be flat in some ranges and increasing in others but never decreasing)
 2. such that $\lim_{x\to-\infty} f(x) = 0$ and $\lim_{x\to\infty} f(x) = 1$
 3. Defined as $F(x) = P(X \le x)$
@@ -28,7 +28,7 @@ Variables that take any value within a range.
 Variable that captures the amount of rainfall.
 ```
 
-#### Discrete Distributions
+### Discrete Distributions
 Have the following properties:
 1. The CDF is described as
 $$F(x)=P(X \le x) = \sum_{x_i \le x} P(X=x_i)$$
@@ -38,7 +38,7 @@ $$0 \le f(x_j) \le 1$$
 $$\sum_{j}f(x_j)=1$$
 
 
-#### Continuous Distributions
+### Continuous Distributions
 1. The CDF is described as
 $$F(x)=\int_{-\infty}^{x}f(y)dy$$
 2. They are described by a **Probability Density Function**
@@ -47,7 +47,7 @@ $$\int_{-\infty}^{\infty}f(x)dx=1$$
 $$f(x) \ge 0$$
 
 ## General Properties of Distributions
-#### Moment of distributions
+### Moment of distributions
 A “moment” refers to how probability mass is distributed. Moments quantify three parameters of distributions: location (where is the mean), shape (what is the geometry: bimodal, asymmetric, heavy tailed etc.), and scale (what is the spread or variance). The **$k^{th}$ central moment** about the mean $\mu_x$ for a random variable X can be written as:
 
 $$
@@ -68,7 +68,7 @@ $$
 E[X^k] = \int_{-\infty}^{\infty} x^k f(x) dx
 $$
 
-#### Expectation and mean $(\mu)$
+### Expectation and mean $(\mu)$
 Mean is the **raw** first $(k=1)$ moment of the distribution. Or it represents the distance at which the center of mass of the distribution is located.
 
 $$
@@ -79,7 +79,7 @@ $$
 E[X] = \int_{-\infty}^{\infty} x f(x) dx
 $$
 
-#### Variance $(\sigma^2)$
+### Variance $(\sigma^2)$
 Variance is the second **central** $(k=2)$ moment of the distribtion. It represents the spread of the distribution.
 
 | <img src="https://github.com/pansworld/probability/blob/1dc0aa73349b4dc47af3dccdf3a8bc5e4604f91a/distirbutions/images/normal_with_diff_variances.png" width="50%" height="50%"> | 
@@ -119,22 +119,21 @@ $$
 Var(X) = E[X^2] - (E[X])^2
 $$
 
-#### Standard Deviation $(\sigma)$
+### Standard Deviation $(\sigma)$
 Standard deviation is another measure of the spread of the distribution that is compatible with the units of the random variable X. It is defined as:
 
 $$
 \sigma = \sqrt{Var(X)}
 $$
 
-#### Skewness
-The third **central** moment $(k=2)$ gives a measure of the skewness of the distribution. A distribution can be positively skewed or negatively skewed as shown below: Positively skewed (or right skewed) has values clustered around the left tail of the distribution whereas a negatively skewed (or left skewed) has values clustered around the right tail of the distribution. Probabilities taper off for higher values (positive), taper off for lower values (negative) and the extreme values are found either on the right or the left of the peak.
+### Skewness
+The third **central** moment $(k=3)$ gives a measure of the skewness of the distribution. A distribution can be positively skewed or negatively skewed as shown below: Positively skewed (or right skewed) has values clustered around the left tail of the distribution whereas a negatively skewed (or left skewed) has values clustered around the right tail of the distribution. Probabilities taper off for higher values (positive), taper off for lower values (negative) and the extreme values are found either on the right or the left of the peak.
 
 | <img src="https://github.com/pansworld/probability/blob/359fc15f0533888caeb0f54c21ea168a55f5dd24/distirbutions/images/positive_negative_skewed.png" width="50%" height="50%"> | 
 |:--:| 
 | Shows negatively and positively skewed distribution. |
 
 Extreme skewness is not desireable and hence there are statistical methods to reduce the skewness:
-
 
 | Positively Skewed | Negatively Skewed |
 |:--:|:------:|
@@ -152,7 +151,11 @@ $$
 E[(X - \mu_x)^3] = \int_{-\infty}^{\infty} (x - \mu_x)^3 f(x) dx
 $$
 
-#### Characteristic function (Fourier transform)
+### Kurtosis
+The fourth **central** moment  $(k=4)$ gives a measure of peakeness of the distribution.
+
+
+### Characteristic function (Fourier transform)
 
 
 ## Common Distribution Types
