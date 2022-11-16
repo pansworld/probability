@@ -144,11 +144,11 @@ Extreme skewness is not desireable and hence there are statistical methods to re
 Skewness is calculated as
 
 $$
-E[(X - \mu_x)^3] = \sum_{i=1}^{n} (x_i - \mu_x)^3 f(x_i)
+E[((X - \mu_x)/\sigma_x)^3] = \sum_{i=1}^{n} ((x_i - \mu_x)/\sigma_x)^3 f(x_i)
 $$
 
 $$
-E[(X - \mu_x)^3] = \int_{-\infty}^{\infty} (x - \mu_x)^3 f(x) dx
+E[((X - \mu_x)/\sigma_x)^3] = \int_{-\infty}^{\infty} ((x - \mu_x)/\sigma_x)^3 f(x) dx
 $$
 
 ### Kurtosis
