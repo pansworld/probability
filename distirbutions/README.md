@@ -151,6 +151,8 @@ $$
 E[((X - \mu_x)/\sigma_x)^3] = \int_{-\infty}^{\infty} ((x - \mu_x)/\sigma_x)^3 f(x) dx
 $$
 
+Here standard score or **Z-score** is also defined as $(X - \mu_x)/\sigma_x$
+
 ### Kurtosis
 The fourth **central** moment  $(k=4)$ gives a measure of peakeness of the distribution.
 
