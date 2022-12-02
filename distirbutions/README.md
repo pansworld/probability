@@ -9,7 +9,7 @@ A probability distribution of a random variable X is the set of probabilities as
 
 ### Cumulative Distribution Function (CDF)
 1. Monotonically non-decreasing function (Function that may be flat in some ranges and increasing in others but never decreasing)
-2. such that $\lim_{x\to-\infty} f(x) = 0$ and $\lim_{x\to\infty} f(x) = 1$
+2. Such that $\lim_{x\to-\infty} f(x) = 0$ and $\lim_{x\to\infty} f(x) = 1$
 3. Defined as $F(x) = P(X \le x)$
 4. Focuses on a sum or integral of values
 
