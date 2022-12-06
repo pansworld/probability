@@ -1,5 +1,23 @@
 # Mathematics Review
 
+## The beauty of e
+The genesis of e is interesting. Consider $f(x)=2^x$. The plot is shown below:
+
+
+To find the slope we increment $x$ by $dx$ and measure the rate of change as
+
+$$ \frac{df(x)}{dx} =  \frac{2^{x+dx} - 2^x}{dx} $$
+
+
+$$ \frac{df(x)}{dx} =  \frac{2^x (2^{dx} - 1)}{dx} $$
+
+The fraction $\frac{2^{dx} - 1}{dx}$ varies at a particular starting value of $x$ depending on incremental change in $dx$. For example for for $dx=0.000091$ it's value is $0.693169041631$ and for $dx=0.000001$ it's value decreases slightly to $0.693147420794$. 
+
+Now consider $f(x)=2.71828^x$. The fraction $\frac{2.71828^{dx} - 1}{dx}$ has a value $1.00004482867$ for $dx=0.000091$ and a value $0.999999827389
+$ for $dx=0.000001$ or it is $\approx 1$
+
+
+
 ## Taylor Series
 Useful for approximating functions in terms of ploynomials. 
 
