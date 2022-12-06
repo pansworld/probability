@@ -28,6 +28,10 @@ or
 
 $$ sin(\theta) = \sum^{\infty}_{n=0} (-1)^{n} \frac{\theta^{2n+1}}{(2n+1)!} $$
 
+The first three terms can be visualized as shown below
+
+| <img src="https://github.com/pansworld/probability/blob/30ca01efd9d445a81e55adebef5828982f0f64c9/basics/images/Taylor_Polynomial_cos_theta.png" width="50%" height="50%"> |
+
 
 ## Euler's formula
 
