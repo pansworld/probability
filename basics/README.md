@@ -1,7 +1,7 @@
 # Mathematics Review
 
 ## The beauty of e
-The genesis of e is interesting. Consider $f(x)=2^x$. To find the slope we increment $x$ by $dx$ and measure the rate of change as
+Consider $f(x)=2^x$. To find the slope we increment $x$ by $dx$ and measure the rate of change as
 
 $$ \frac{df(x)}{dx} =  \frac{2^{x+dx} - 2^x}{dx} $$
 
