@@ -61,6 +61,32 @@ $$ e^x =  \sum^{\infty}_{n=0} \frac{x^{n}}{(n)!} $$
 
 ## Euler's formula
 
+Consider the Taylor series for complex function $e^{ix}$
+
+$$ e^{ix} =  \sum^{\infty}_{n=0} \frac{(ix)^{n}}{(n)!} $$
+
+$$ e^{ix} = \sum^{\infty}_{n=0} i^{n} \frac{(x)^{n}}{(n)!} $$
+
+Expanding the summation
+
+$$ e^{ix} = 1 + \frac{ix}{1!} - \frac{x^2}{2!} - \frac{ix^3}{3!} + \frac{x^4}{4!} + \frac{ix^5}{5!} ... $$
+
+Separating the real and imaginary parts
+
+$$ e^{ix} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} ... + i(\frac{x}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} ...) $$
+
+
+$$ e^{ix} = cos(x) + isin(x) $$
+
+You can also derive Euler's identity as by setting $x=\pi$
+
+$$ e^{i\pi} = cos(\pi) + isin(\pi) $$
+
+$$ e^{i\pi} = -1  + 0 $$
+
+$$ e^{i\pi} + 1 = 0 $$
+
+
 ## Fourier Transform
 
 ## References
