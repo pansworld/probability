@@ -32,7 +32,14 @@ The first three terms can be visualized as shown below
 
 | <img src="https://github.com/pansworld/probability/blob/30ca01efd9d445a81e55adebef5828982f0f64c9/basics/images/Taylor_Polynomial_cos_theta.png" width="50%" height="50%"> |
 
+This power series expansion of functions is good for approximation and may be useful in computations, but it does not tell us the whole story about the function itself. For example the power series does not indicate that sine and cosine functions are periodic in $2\pi$.
+
 
 ## Euler's formula
 
 ## Fourier Transform
+
+## References
+[Taylor Series: Essence of Caclulus](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
+
+[Taylor’s Series of sin x](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/242ad6a22b86b20799afc7f207cd4271_MIT18_01SCF10_Ses99c.pdf)
