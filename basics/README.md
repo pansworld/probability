@@ -18,7 +18,7 @@ $$ cos(\theta) = 1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \frac{\theta^6}
 
 or 
 
-$$ cos(\theta) = \sum^{\infty}_{n=0} (-1)^{n/2} \frac{\theta^{2n}}{2n!} $$
+$$ cos(\theta) = \sum^{\infty}_{n=0} (-1)^{n} \frac{\theta^{2n}}{2n!} $$
 
 Similarly $sin(\theta)$ can we written in terms of the Taylor series as
 
@@ -26,7 +26,7 @@ $$ sin(\theta) = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \frac{\the
 
 or 
 
-$$ sin(\theta) = \sum^{\infty}_{n=0} (-1)^{2n+1} \frac{\theta^{2n+1}}{2n+1!} $$
+$$ sin(\theta) = \sum^{\infty}_{n=0} (-1)^{n} \frac{\theta^{2n+1}}{(2n+1)!} $$
 
 
 ## Euler's formula
