@@ -54,6 +54,11 @@ The first three terms can be visualized as shown below
 This power series expansion of functions is good for approximation and may be useful in computations, but it does not tell us the whole story about the function itself. For example the power series does not indicate that sine and cosine functions are periodic in $2\pi$.
 
 
+## Taylor Series for e
+The Taylor series for $e^x$ can be written as 
+
+$$ e^x =  \sum^{\infty}_{n=0} \frac{x^{n}}{(n)!} $$
+
 ## Euler's formula
 
 ## Fourier Transform
