@@ -88,6 +88,11 @@ $$ e^{i\pi} + 1 = 0 $$
 
 
 ## Fourier Transform
+Basic concept is that any waveform can we represented as a combination of sinusoids. The transform converts a time series function into the frequency domain. For example the $\sin\left(x\right)-\sin\left(2x\right)+\cos\left(5x\right)-\cos\left(10x\right)$ can be represented as shown below:
+
+| <img src="https://github.com/pansworld/probability/blob/10f8a62875dd1505afffcb70c1f649d2be785896/basics/images/Fourier_Transform_Combined_Sinusoids.png" width="50%" height="50%"> |
+
+
 
 ## References
 - [Taylor Series: Essence of Caclulus](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
