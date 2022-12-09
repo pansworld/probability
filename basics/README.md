@@ -130,7 +130,10 @@ $$ f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx}$$
 **Random Tidbits:**
 Sine function is an odd function and satisfies $f(-x) = -f(x)$ and cosine is an even function that statisfies $f(-x)=f(x)$. The Integral of $-\pi$ to $\pi$ of odd function is 0 and even function is 2 times. All even functions $f(x)$ will have cosine basis functions in their fourier series and odd functions will have sine basis functions.
 
+## Fourier Transform
+We can convert the function from a time domain to frequency domain by using the Fourier transform given as
 
+$$ x(i\omega) = \int_{-\infty}^{\infty} x(t) e^{-i\omega t} dt $$
 
 ## References
 - [Taylor Series: Essence of Caclulus](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
@@ -138,3 +141,4 @@ Sine function is an odd function and satisfies $f(-x) = -f(x)$ and cosine is an 
 - [What's so special about Euler's number e?](https://www.youtube.com/watch?v=m2MIpDrF7Es&t=55s)
 - [Introduction of Fourier Series](https://www.youtube.com/watch?v=vA9dfINW4Rgurl)
 - [Examples of Fourier Series](https://www.youtube.com/watch?v=lL0oUZGMhXc)
+- [Fourier Transform Explained](https://www.youtube.com/watch?v=8V6Hi-kP9EE)
