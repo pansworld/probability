@@ -124,7 +124,7 @@ Similarly,
 $$ b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) sin(kx) dx $$
 
 **Random tidbits:**
-Sine function is an odd function and satisfies $f(-x) = -f(x)$ and cosine is an even function that statisfies $f(-x)=f(x)$. The Integral of $-\pi$ to $\pi$ of odd function is 0 and even function is 2 times.
+Sine function is an odd function and satisfies $f(-x) = -f(x)$ and cosine is an even function that statisfies $f(-x)=f(x)$. The Integral of $-\pi$ to $\pi$ of odd function is 0 and even function is 2 times. All even functions $f(x)$ will have cosine basis functions in their fourier series and odd functions will have sine basis functions.
 
 
 
