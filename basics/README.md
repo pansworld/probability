@@ -18,7 +18,6 @@ $$ \frac{df(x)}{dx} = e^x $$
 where $e=2.718281828459045...$
 
 
-
 ## Taylor Series
 Useful for approximating functions in terms of ploynomials. 
 
@@ -87,10 +86,45 @@ $$ e^{i\pi} = -1  + 0 $$
 $$ e^{i\pi} + 1 = 0 $$
 
 
-## Fourier Transform
+## Fourier Series
 Basic concept is that any waveform can we represented as a combination of sinusoids. The transform converts a time series function into the frequency domain. For example the $\sin\left(x\right)-\sin\left(2x\right)+\cos\left(5x\right)-\cos\left(10x\right)$ can be represented as shown below:
 
 | <img src="https://github.com/pansworld/probability/blob/10f8a62875dd1505afffcb70c1f649d2be785896/basics/images/Fourier_Transform_Combined_Sinusoids.png" width="50%" height="50%"> |
+
+The discrete combination in general can be represented as basis functions cosine / sine and coefficients $a_n$ and $b_n$
+
+$$ f(x) = \sum_{n=0}^{infty} a_n cos(nx) + \sum_{n=0}^{infty} b_n sin(nx) $$
+
+or
+
+$$ f(x) = \sum_{n=-\infty}^{\infty} c_n e^{inx} $$
+
+We use the orthogonality between basis functions of different frequencies to find values of $a_n$ and $b_n$. The dot product is represented as:
+
+$$ \int_{-\infty}^{\infty} cos(nx) cos(kx) dx = 0 $$
+
+$$ \int_{-\infty}^{\infty} sin(nx) sin(kx) dx = 0 $$
+
+$$ \int_{-\infty}^{\infty} cos(nx) sin(kx) dx = 0 $$
+
+To get $a_k$ we multiply both sides of the series by $cos(kx)$ and integrate over $=\pi$ to $\pi$ or
+
+$$ \int_{-\pi}^{\pi} f(x) cos(kx) dx = \int_{-\pi}^{\pi} \sum_{n=0}^{\infty} a_n cos(nx) cos(kx) dx + \int_{-\pi}^{\pi} \sum_{n=0}^{\infty} b_n sin(nx) cos(kx) dx $$
+
+$$ \int_{-\pi}^{\pi} f(x) cos(kx) dx = \int_{-\pi}^{\pi} a_k cos(kx)^2 dx $$
+
+$$ \int_{-\pi}^{\pi} f(x) cos(kx) dx = a_k \pi $$
+
+$$ a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) cos(kx) dx $$
+
+$$ a_0 = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) dx $$
+
+Similarly,
+
+$$ b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) sin(kx) dx $$
+
+**Random tidbits:**
+Sine function is an odd function and satisfies $f(-x) = -f(x)$ and cosine is an even function that statisfies $f(-x)=f(x)$. The Integral of $-\pi$ to $\pi$ of odd function is 0 and even function is 2 times.
 
 
 
@@ -98,3 +132,5 @@ Basic concept is that any waveform can we represented as a combination of sinuso
 - [Taylor Series: Essence of Caclulus](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
 - [Taylor’s Series of sin x](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/242ad6a22b86b20799afc7f207cd4271_MIT18_01SCF10_Ses99c.pdf)
 - [What's so special about Euler's number e?](https://www.youtube.com/watch?v=m2MIpDrF7Es&t=55s)
+- [Introduction of Fourier Series](https://www.youtube.com/watch?v=vA9dfINW4Rgurl)
+- [Examples of Fourier Series](https://www.youtube.com/watch?v=lL0oUZGMhXc)
