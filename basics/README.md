@@ -133,11 +133,12 @@ Sine function is an odd function and satisfies $f(-x) = -f(x)$ and cosine is an 
 ## Fourier Transform
 We can convert the function from a time domain to frequency domain by using the Fourier transform given as
 
-$$ x(t) = \int_{-\infty}^{\infty} x(i\omega) e^{-i\omega t} d\omega $$
+$$ x(i\omega) = \int_{-\infty}^{\infty} x(t) e^{-i\omega t} dt $$
 
 or the inverse transform
 
-$$ x(i\omega) = \int_{-\infty}^{\infty} x(t) e^{-i\omega t} dt $$
+$$ x(t) = \int_{-\infty}^{\infty} x(i\omega) e^{-i\omega t} d\omega $$
+
 
 ## References
 - [Taylor Series: Essence of Caclulus](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
