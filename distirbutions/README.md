@@ -162,7 +162,21 @@ Note: Skewness is **not** a test of symmetry. Asymmetric distributions can have 
 The fourth **central** moment  $(k=4)$ gives a measure of peakeness of the distribution.
 
 
-### Characteristic function (Fourier transform)
+### Characteristic function for Random Variables
+Characteristic functions are moment generating functions that can be used to analyze the characteristics (moments) of a random variable. A characteristic function uses Inverse Fourier Transform a analyze random variable in a different space. Each random variable generally has a unique characteristic function and it makes it easier to mathematically analyze combinations of characteristic functions rahter than PMFs or PDFs.
+
+The characteristic function uses the Inverse Fourier transform to represent the random variable as:
+
+$$ \phi_x(t) = E_x[e^{ixt}] $$
+
+or
+
+$$ \phi_x(t) = \int_{-\infty}^{\infty} f(x)e^{ixt} dx $$
+
+where $f(x)$ represents the Probability Density Function for random variable X.
+
+**Why is $e^{ixt}$ a moment generating function?**
+
 
 
 ## Common Distribution Types
