@@ -210,3 +210,5 @@ Hence $e^{ixt}$ is a moment generating function.
 2. [Statistics cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-statistics)
 3. [Understanding Moment](https://gregorygundersen.com/blog/2020/04/11/moments/)
 4. [Data Skewness Reducing Techniques](https://www.kaggle.com/getting-started/110134)
+5. [What are moment generating functions?](https://www.youtube.com/watch?v=dVRWBmykncQ&t=313s)
+6. [What are characteristic functions?](https://www.youtube.com/watch?v=mYhca1p26n4)
