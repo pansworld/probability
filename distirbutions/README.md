@@ -167,11 +167,11 @@ Characteristic functions are moment generating functions that can be used to ana
 
 The characteristic function uses the Inverse Fourier transform to represent the random variable as:
 
-$$ \phi_x(t) = E_x[e^{ixt}] $$
+$$ \phi_x(\omega) = E_x[e^{ix\omega}] $$
 
 or
 
-$$ \phi_x(t) = \int_{-\infty}^{\infty} f(x)e^{ixt} dx $$
+$$ \phi_x(\omega) = \int_{-\infty}^{\infty} f(x)e^{ix\omega} dx $$
 
 where $f(x)$ represents the Probability Density Function for random variable X.
 
