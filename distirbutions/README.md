@@ -159,7 +159,7 @@ A standard score or z-score of a point close to $\mu_x$ will have a small value 
 Note: Skewness is **not** a test of symmetry. Asymmetric distributions can have zero skewness. But Symmetric distributions always have zero skewness.
 
 ### Kurtosis
-The fourth **central** moment  $(k=4)$ gives a measure of peakeness of the distribution.
+The fourth **central** moment  $(k=4)$ gives a measure of peakiness of the distribution.
 
 
 ### Characteristic function for Random Variables
@@ -176,8 +176,21 @@ $$ \phi_x(t) = \int_{-\infty}^{\infty} f(x)e^{ixt} dx $$
 where $f(x)$ represents the Probability Density Function for random variable X.
 
 **Why is $e^{ixt}$ a moment generating function?**
+For a random variable X
 
+$$e^{X} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + .... $$
 
+$$e^{tX} = 1 + \frac{tx}{1!} + \frac{(tx)^2}{2!} + \frac{(tx)^3}{3!} + \frac{(tx)^4}{4!} + \frac{(tx)^5}{5!} + .... $$
+
+$$E[e^{tX}] = 1 + \frac{t}{1!} E[X] + \frac{t}{2!} E[X^2] + \frac{t}{3!} E[X^3] + \frac{t}{4!} E[X^4] + \frac{t}{5!} E[X^5] .... $$
+
+We can find the coefficients by taking the differential and setting t=0
+
+$$\frac{dE[e^{tX}]}{dt} |_{t=0} = 0 + E[X] + 0 + 0 ... $$ 
+
+$$\frac{d^2E[e^{tX}]}{dt} |_{t=0} = 0 + 0 + E[X^2] + 0 + 0 ... $$ 
+
+Hence $e^{ixt}$ is a moment generating function.
 
 ## Common Distribution Types
 #### Bernoulli (Discrete)
