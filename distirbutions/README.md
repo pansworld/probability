@@ -176,15 +176,16 @@ $$ \phi_x(\omega) = \int_{-\infty}^{\infty} f(x)e^{ix\omega} dx $$
 where $f(x)$ represents the Probability Density Function for random variable X.
 
 **Why is $e^{ix\omega}$ a moment generating function?**
-For a random variable X
+For a random variable X, 
 
 $$e^{X} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + .... $$
 
 $$e^{\omega X} = 1 + \frac{\omega x}{1!} + \frac{(\omega x)^2}{2!} + \frac{(\omega x)^3}{3!} + \frac{(\omega x)^4}{4!} + \frac{(\omega x)^5}{5!} + .... $$
 
+
 $$E[e^{\omega X}] = 1 + \frac{\omega}{1!} E[X] + \frac{\omega^2}{2!} E[X^2] + \frac{\omega^3}{3!} E[X^3] + \frac{\omega^4}{4!} E[X^4] + \frac{\omega^5}{5!} E[X^5] .... $$
 
-We can find the coefficients by taking the differential and setting t=0
+Provided Expectation exists from some \omega in the neighborhood of 0, we can find the coefficients by taking the differential and setting $\omega=0$
 
 $$\frac{dE[e^{\omega X}]}{d\omega} |_{\omega=0} = 0 + E[X] + 0 + 0 ... $$ 
 
