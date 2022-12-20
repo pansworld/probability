@@ -196,6 +196,7 @@ Hence $e^{ix \omega}$ is a moment generating function.
 ## Common Distribution Types
 #### Bernoulli (Discrete)
 
+
 #### Poisson (Discrete)
 
 #### Uniform (Continuous)
