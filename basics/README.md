@@ -93,7 +93,7 @@ Basic concept is that any waveform can we represented as a combination of sinuso
 
 The discrete combination in general can be represented as basis functions cosine / sine and coefficients $a_n$ and $b_n$
 
-$$ f(x) = \sum_{n=0}^{infty} a_n cos(nx) + \sum_{n=0}^{infty} b_n sin(nx) $$
+$$ f(x) = \sum_{n=0}^{\infty} a_n cos(nx) + \sum_{n=0}^{\infty} b_n sin(nx) $$
 
 or
 
