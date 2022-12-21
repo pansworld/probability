@@ -162,7 +162,7 @@ This is a naive definition that assumes all outcomes are equally likely and it i
 If there are $n_1$ outcomes from expeirment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
 
 **Example**
-If you have ice-cream with two things to experiment. Once is choose a cone and the second choose a flavor. The for the choice of each cone -> With or Without cone you can choose the flavor which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
+If you have ice-cream with two things to experiment. Once is choose a cone and the second choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
 
 | Choice of Cone | Choice of Flavor |
 |----------------|------------------|
@@ -172,6 +172,16 @@ If you have ice-cream with two things to experiment. Once is choose a cone and t
 | Cone           | Strawberry       |
 | Cone           | Chocolate        |
 | Cone           | Vanilla          |
+
+
+## Combinations
+"My fruit salad is a combination of apples, grapes and bananas" We do not care about the order of items in the salad and repetition is allowed.
+
+## Permuatations
+"The combination to the safe is 427" In this case the order in which the numbers are entered matter. A permutation is an ordered combination.
+There are two flavors:
+* Repetition is allowed
+* Repitition is not allowed
 
 
 ## Types of probability
