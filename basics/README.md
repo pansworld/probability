@@ -140,6 +140,45 @@ or the inverse transform
 $$ x(t) = \int_{-\infty}^{\infty} x(i\omega) e^{-i\omega t} d\omega $$
 
 
+# Probability Review
+
+## Definitions
+### Sample Space (S)
+Set of all possible outcomes of an experument.
+
+### Event (E)
+Event is a subset of the sample space.
+
+### Probability
+Defined as P(E), is the odds that the event E will occur. Defined as 
+
+$$ \frac{no \textunderscore of \textunderscore favorable \textunderscore outcomes}{no \textunderscore of \textunderscore possible \textunderscore
+ outcomes} $$
+
+This is a naive definition that assumes all outcomes are equally likely and it is the finite sample space. Naive definition works some cases but the equally likely is a very strong assumption.
+
+## How do we count?
+### Multiplication rule
+If there are $n_1$ outcomes from expeirment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
+
+**Example**
+If you have ice-cream with two things to experiment. Once is choose a cone and the second choose a flavor. The for the choice of each cone -> With or Without cone you can choose the flavor which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
+
+| Choice of Cone | Choice of Flavor |
+|----------------|------------------|
+| No Cone        | Strawberry       |
+| No Cone        | Chocolate        |
+| No Cone        | Vanilla          |
+| Cone           | Strawberry       |
+| Cone           | Chocolate        |
+| Cone           | Vanilla          |
+
+
+## Types of probability
+
+## Birthday Paradox
+
+
 ## References
 - [Taylor Series: Essence of Caclulus](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
 - [Taylor’s Series of sin x](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/242ad6a22b86b20799afc7f207cd4271_MIT18_01SCF10_Ses99c.pdf)
@@ -147,3 +186,4 @@ $$ x(t) = \int_{-\infty}^{\infty} x(i\omega) e^{-i\omega t} d\omega $$
 - [Introduction of Fourier Series](https://www.youtube.com/watch?v=vA9dfINW4Rgurl)
 - [Examples of Fourier Series](https://www.youtube.com/watch?v=lL0oUZGMhXc)
 - [Fourier Transform Explained](https://www.youtube.com/watch?v=8V6Hi-kP9EE)
+- [Stat 110 : Probability](https://www.youtube.com/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&index=1)
