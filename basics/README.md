@@ -174,14 +174,32 @@ If you have ice-cream with two things to experiment. Once is choose a cone and t
 | Cone           | Vanilla          |
 
 
-## Combinations
-"My fruit salad is a combination of apples, grapes and bananas" We do not care about the order of items in the salad and repetition is allowed.
-
 ## Permuatations
 "The combination to the safe is 427" In this case the order in which the numbers are entered matter. A permutation is an ordered combination.
-There are two flavors:
-* Repetition is allowed
-* Repitition is not allowed
+There are two types of permutations:
+* Repetition is allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are allowed to choose the same number when making each choice. For each choice we have $n$ options and hence the total number of choices are $$^nP_r=n\*n\*n ...= n^r$$
+* Repitition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are not allowed choose the same number when making each choice. For each choice the number of options decrease by the number of prior choices made or 
+
+$$^nP_r = n\*(n-1)\*(n-2)\*...(n-r+1) = \frac{n!}{(n-r)!}$$
+
+## Combinations
+"My fruit salad is a combination of apples, grapes and bananas" We do not care about the order of items in the salad and repetition is allowed. There are two types of combinations:
+* Repetition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose the three characters (a,b,c) from a set of 27 characters (a .. z). In permutations the order matters and we have 6 more choices we consider vs. combinations where order does not matter. We overcount by 6 or the number of ways a,b,c (3x2x1) can be placed as shown below. 
+
+| All Choices where order matters | Choices where order does not matter |
+|---------------------------------|-------------------------------------|
+| a,b,c                           |                                     |
+| a,c,b                           |                                     |
+| b,a,c                           | a,b,c                               |
+| b,c,a                           |                                     |
+| c,b,a                           |                                     |
+| c,a,b                           |                                     |
+
+We adjust the permutations to reduce the number of times we have overcounted due to the order.
+
+$$ ^nC_r = \frac{n!}{(n-r)!} \cdot \frac{1}{r!} $$
+
+This is also know as the **binomial coefficient**.
 
 
 ## Types of probability
@@ -197,3 +215,4 @@ There are two flavors:
 - [Examples of Fourier Series](https://www.youtube.com/watch?v=lL0oUZGMhXc)
 - [Fourier Transform Explained](https://www.youtube.com/watch?v=8V6Hi-kP9EE)
 - [Stat 110 : Probability](https://www.youtube.com/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&index=1)
+- [Permutations and Combinations Review](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
