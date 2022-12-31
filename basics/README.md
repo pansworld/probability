@@ -216,3 +216,4 @@ This is also know as the **binomial coefficient**.
 - [Fourier Transform Explained](https://www.youtube.com/watch?v=8V6Hi-kP9EE)
 - [Stat 110 : Probability](https://www.youtube.com/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&index=1)
 - [Permutations and Combinations Review](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
+- [Desmos Graphing Calculator](https://www.desmos.com/calculator)
