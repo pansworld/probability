@@ -1,3 +1,94 @@
+# Probability Review
+
+## Definitions
+### Sample Space (S)
+Set of all possible outcomes of an experument.
+
+### Event (E)
+Event is a subset of the sample space.
+
+### Probability
+Defined as P(E), is the odds that the event E will occur. Defined as 
+
+$$ \frac{no \textunderscore of \textunderscore favorable \textunderscore outcomes}{no \textunderscore of \textunderscore possible \textunderscore
+ outcomes} $$
+
+This is a naive definition that assumes all outcomes are equally likely and it is the finite sample space. Naive definition works some cases but the equally likely is a very strong assumption.
+
+## How do we count?
+### Multiplication rule
+If there are $n_1$ outcomes from expeirment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
+
+**Example**
+If you have ice-cream with two things to experiment. Once is choose a cone and the second choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
+
+| Choice of Cone | Choice of Flavor |
+|----------------|------------------|
+| No Cone        | Strawberry       |
+| No Cone        | Chocolate        |
+| No Cone        | Vanilla          |
+| Cone           | Strawberry       |
+| Cone           | Chocolate        |
+| Cone           | Vanilla          |
+
+
+## Permuatations
+"The combination to the safe is 427" In this case the order in which the numbers are entered matter. A permutation is an ordered combination.
+There are two types of permutations:
+* Repetition is allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are allowed to choose the same number when making each choice. For each choice we have $n$ options and hence the total number of choices are $$^nP_r=n\*n\*n ...= n^r$$
+* Repitition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are not allowed choose the same number when making each choice. For each choice the number of options decrease by the number of prior choices made or 
+
+$$^nP_r = n\*(n-1)\*(n-2)\*...(n-r+1) = \frac{n!}{(n-r)!}$$
+
+## Combinations
+"My fruit salad is a combination of apples, grapes and bananas" We do not care about the order of items in the salad and repetition is allowed. There are two types of combinations:
+* Repetition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose the three characters (a,b,c) from a set of 27 characters (a .. z). In permutations the order matters and we have 6 more choices we consider vs. combinations where order does not matter. We overcount by 6 or the number of ways a,b,c (3x2x1) can be placed as shown below. 
+
+| All Choices where order matters | Choices where order does not matter |
+|---------------------------------|-------------------------------------|
+| a,b,c                           |                                     |
+| a,c,b                           |                                     |
+| b,a,c                           | a,b,c                               |
+| b,c,a                           |                                     |
+| c,b,a                           |                                     |
+| c,a,b                           |                                     |
+
+We adjust the permutations to reduce the number of times we have overcounted due to the order.
+
+$$ ^nC_r = \frac{n!}{(n-r)!} \cdot \frac{1}{r!} $$
+
+This is also know as the **binomial coefficient**.
+
+## Birthday Paradox
+Interesting example to study. The problem statement is "What is the probability that at least 2 out of n people in a room have the same birthday?" The best way to approach it is to determine the probability that none of the n people share the same birthday. So if $A$ is the event that at least one pair has the same birthday then $A^c$ represents the complement where no one has a shared birthday.
+
+$$
+P(A) = 1 - P(A^c)
+$$
+
+**Questions for total number of ways in which we can pick n birthdays:**
+1. Does order matter? 
+Yes. We could pick John first and then Fred or pick Fred first, then Sandy and then John.
+2. Are repetitiions allowed? 
+Yes. We are picking n dates from 365 dates. If we get day 1 as a birthday for person 1 then we can also have day 1 as a birthday for person 2. Hence they are all equally likely.
+
+Hence, the number of permutations for picking n birthdays from 365 is $365^n$.
+
+**Questions for total number of ways in which we can pick n birthdays such that two birthdays are not repeated:**
+1. Does order matter? 
+Yes. We could pick John first and then Fred or pick Fred first, then Sandy and then John.
+2. Are repetitiions allowed? 
+No. Once we pick a birth date, we cannot have another person with the same birth date. 
+
+Hence, the number of permutations for picking non-repeating n birthdays from 365 is $\frac{365!}{(365-n)!}$.
+
+Hence the probability of at least one birthday being shared between n people can be given as:
+
+$$
+P(A) = 1 - \frac{365!}{(365-n)!}.\frac{1}{365^n}
+$$
+
+
 # Mathematics Review
 
 ## The beauty of e
@@ -138,73 +229,6 @@ $$ x(i\omega) = \int_{-\infty}^{\infty} x(t) e^{-i\omega t} dt $$
 or the inverse transform
 
 $$ x(t) = \int_{-\infty}^{\infty} x(i\omega) e^{-i\omega t} d\omega $$
-
-
-# Probability Review
-
-## Definitions
-### Sample Space (S)
-Set of all possible outcomes of an experument.
-
-### Event (E)
-Event is a subset of the sample space.
-
-### Probability
-Defined as P(E), is the odds that the event E will occur. Defined as 
-
-$$ \frac{no \textunderscore of \textunderscore favorable \textunderscore outcomes}{no \textunderscore of \textunderscore possible \textunderscore
- outcomes} $$
-
-This is a naive definition that assumes all outcomes are equally likely and it is the finite sample space. Naive definition works some cases but the equally likely is a very strong assumption.
-
-## How do we count?
-### Multiplication rule
-If there are $n_1$ outcomes from expeirment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
-
-**Example**
-If you have ice-cream with two things to experiment. Once is choose a cone and the second choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
-
-| Choice of Cone | Choice of Flavor |
-|----------------|------------------|
-| No Cone        | Strawberry       |
-| No Cone        | Chocolate        |
-| No Cone        | Vanilla          |
-| Cone           | Strawberry       |
-| Cone           | Chocolate        |
-| Cone           | Vanilla          |
-
-
-## Permuatations
-"The combination to the safe is 427" In this case the order in which the numbers are entered matter. A permutation is an ordered combination.
-There are two types of permutations:
-* Repetition is allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are allowed to choose the same number when making each choice. For each choice we have $n$ options and hence the total number of choices are $$^nP_r=n\*n\*n ...= n^r$$
-* Repitition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are not allowed choose the same number when making each choice. For each choice the number of options decrease by the number of prior choices made or 
-
-$$^nP_r = n\*(n-1)\*(n-2)\*...(n-r+1) = \frac{n!}{(n-r)!}$$
-
-## Combinations
-"My fruit salad is a combination of apples, grapes and bananas" We do not care about the order of items in the salad and repetition is allowed. There are two types of combinations:
-* Repetition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose the three characters (a,b,c) from a set of 27 characters (a .. z). In permutations the order matters and we have 6 more choices we consider vs. combinations where order does not matter. We overcount by 6 or the number of ways a,b,c (3x2x1) can be placed as shown below. 
-
-| All Choices where order matters | Choices where order does not matter |
-|---------------------------------|-------------------------------------|
-| a,b,c                           |                                     |
-| a,c,b                           |                                     |
-| b,a,c                           | a,b,c                               |
-| b,c,a                           |                                     |
-| c,b,a                           |                                     |
-| c,a,b                           |                                     |
-
-We adjust the permutations to reduce the number of times we have overcounted due to the order.
-
-$$ ^nC_r = \frac{n!}{(n-r)!} \cdot \frac{1}{r!} $$
-
-This is also know as the **binomial coefficient**.
-
-
-## Types of probability
-
-## Birthday Paradox
 
 
 ## References
