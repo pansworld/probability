@@ -66,6 +66,7 @@ $$
 P(A) = 1 - P(A^c)
 $$
 
+
 **Questions for total number of ways in which we can pick n birthdays:**
 1. Does order matter? 
 Yes. We could pick John first and then Fred or pick Fred first, then Sandy and then John.
@@ -86,6 +87,25 @@ Hence the probability of at least one birthday being shared between n people can
 
 $$
 P(A) = 1 - \frac{365!}{(365-n)!}.\frac{1}{365^n}
+$$
+
+## Inclusion Exclusion
+If we have two interseting events $A$ and $B$ within sample space $S$ then the probability of the union of the two events (at least one outcome from the two events occuring) is given as
+
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+For three $A_1,A_2,A_3$ we can define it is 
+
+$$
+P(A_1 \cup A_2 \cup A_3) = P(A_1) + P(A_2) + P(A_3) - P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_3)
+$$
+
+For n events $A_1..A_n$ we can generalize it as
+
+$$
+P(A_1 \cup A_2..\cup A_n) = \sum_{i=1}^{n} P(A_i) - \sum_{i<j}^{n} P(A_i \cap A_j) 
 $$
 
 
