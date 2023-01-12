@@ -105,7 +105,7 @@ $$
 For n events $A_1..A_n$ we can generalize it as
 
 $$
-P(A_1 \cup A_2..\cup A_n) = \sum_{i=1}^{n} P(A_i) - \sum_{i<j}^{n} P(A_i \cap A_j) + \sum_{i<j<k}^{n} P(A_i \cap A_j \cap A_k) .. (-1)^(n+1) P(A_1 \cap A_2 .. \cap A_n)
+P(A_1 \cup A_2..\cup A_n) = \sum_{i=1}^{n} P(A_i) - \sum_{i=1, j=2, i \lt j}^{n} P(A_i \cap A_j) + \sum_{i=1,j=2,k=2, i \lt j \lt k }^{n} P(A_i \cap A_j \cap A_k) .. (-1)^{n+1} P(A_1 \cap A_2 .. \cap A_n)
 $$
 
 
