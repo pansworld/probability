@@ -97,7 +97,7 @@ P(A \cup B) = P(A) + P(B) - P(A \cap B)
 $$
 
 For three $A_1,A_2,A_3$ we can define it is 
-
+The 
 $$
 P(A_1 \cup A_2 \cup A_3) = P(A_1) + P(A_2) + P(A_3) - P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_3)
 $$
@@ -107,6 +107,22 @@ For n events $A_1..A_n$ we can generalize it as
 $$
 P(A_1 \cup A_2..\cup A_n) = \sum_{i=1}^{n} P(A_i) - \sum_{i=1, j=2, i \lt j}^{n} P(A_i \cap A_j) + \sum_{i=1,j=2,k=2, i \lt j \lt k }^{n} P(A_i \cap A_j \cap A_k) .. (-1)^{n+1} P(A_1 \cap A_2 .. \cap A_n)
 $$
+
+# De Montmort matching problem
+**Problem statement:** A deck of cards is labeled from 1 to n. As you flip each card you call out the card number. Find the probability that you call out the same card number as the one that is being flipped. Essentially, if $A_i$ is the event that the $i^{th}$ card is the winning card then the probability we are trying to compute is $P(\cup_{i=1}^{n} A_i)$. (Reproduced from Stat 110 Lectures 3 & 4. See link below)
+
+**Strategy for finding the union.**
+* We find the probability of the intersection from $1..k$ intersection of $P(A_1 \cap A_2 \cap .. A_k)$
+* Use the generic intersection and summation expansion of the inclusion/exclusion for a union.
+
+The probability of intersection can be given as:
+
+$$
+P(A_1 \cap A_2 .. \cap A_k) = \frac{(n-k)!}{n!}
+$$
+
+The denominator $n!$ since the total number of outcomes is the permutation of arranging n cards (without repetition - if we place one card we cannot reuse it. We are choosing n to place n cards out of n or $^nP_n$). In the numerator $k$ cards are fixed and we are finding the permutation of placing $n-k$ cards out of a total of $n-k$ cards or $^{(n-k)}P_{(n-k)}$.
+
 
 
 # Mathematics Review
