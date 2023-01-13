@@ -32,7 +32,7 @@ If you have ice-cream with two things to experiment. Once is choose a cone and t
 | Cone           | Vanilla          |
 
 
-## Permuatations
+### Permuatations
 "The combination to the safe is 427" In this case the order in which the numbers are entered matter. A permutation is an ordered combination.
 There are two types of permutations:
 * Repetition is allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose three numbers $(r=3)$ from 0 through 9 numbers $(n=10)$ and we are allowed to choose the same number when making each choice. For each choice we have $n$ options and hence the total number of choices are $$^nP_r=n\*n\*n ...= n^r$$
@@ -40,7 +40,7 @@ There are two types of permutations:
 
 $$^nP_r = n\*(n-1)\*(n-2)\*...(n-r+1) = \frac{n!}{(n-r)!}$$
 
-## Combinations
+### Combinations
 "My fruit salad is a combination of apples, grapes and bananas" We do not care about the order of items in the salad and repetition is allowed. There are two types of combinations:
 * Repetition is not allowed: Suppose we make $r$ choices from $n$ items.<br /> **Example:** We choose the three characters (a,b,c) from a set of 27 characters (a .. z). In permutations the order matters and we have 6 more choices we consider vs. combinations where order does not matter. We overcount by 6 or the number of ways a,b,c (3x2x1) can be placed as shown below. 
 
@@ -59,7 +59,7 @@ $$ ^nC_r = \frac{n!}{(n-r)!} \cdot \frac{1}{r!} $$
 
 This is also know as the **binomial coefficient**.
 
-## Birthday Paradox
+### Birthday Paradox
 Interesting example to study. The problem statement is "What is the probability that at least 2 out of n people in a room have the same birthday?" The best way to approach it is to determine the probability that none of the n people share the same birthday. So if $A$ is the event that at least one pair has the same birthday then $A^c$ represents the complement where no one has a shared birthday.
 
 $$
@@ -108,7 +108,7 @@ $$
 P(A_1 \cup A_2..\cup A_n) = \sum_{i=1}^{n} P(A_i) - \sum_{i=1, j=2, i \lt j}^{n} P(A_i \cap A_j) + \sum_{i=1,j=2,k=2, i \lt j \lt k }^{n} P(A_i \cap A_j \cap A_k) .. (-1)^{n+1} P(A_1 \cap A_2 .. \cap A_n)
 $$
 
-# De Montmort matching problem
+### De Montmort matching problem
 **Problem statement:** A deck of cards is labeled from 1 to n. As you flip each card you call out the card number. Find the probability that you call out the same card number as the one that is being flipped. Essentially, if $A_i$ is the event that the $i^{th}$ card is the winning card then the probability we are trying to compute is $P(\cup_{i=1}^{n} A_i)$. (Reproduced from Stat 110 Lectures 3 & 4. See link below)
 
 **Strategy for finding the union.**
@@ -146,6 +146,9 @@ Using the taylor series can be approximated to
 $$
 P(A_1 \cup A_2 \cup .. A_n) = 1 - e^{-1}
 $$
+
+
+## Independence
 
 # Mathematics Review
 
