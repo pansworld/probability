@@ -123,7 +123,29 @@ $$
 
 The denominator $n!$ since the total number of outcomes is the permutation of arranging n cards (without repetition - if we place one card we cannot reuse it. We are choosing n to place n cards out of n or $^nP_n$). In the numerator $k$ cards are fixed and we are finding the permutation of placing $n-k$ cards out of a total of $n-k$ cards or $^{(n-k)}P_{(n-k)}$.
 
+Now we use the expansion. Notice that each summation contains a list of intersections which are non-repeating and order does not matter. For example $P(A_1 \cap A_2) = P(A_2 \cap A_1)$. Hence the $k_th$ summation term a choice of $k$ events from $n$ events or $^nC_k$ or $\frac{n!}{(n-k)!}.\frac{1}{k!}$
 
+The $k_th$ term of the inclusion exclusion can be given as
+
+$$
+\sum_{(i \lt j \lt.. \lt m) and (i=1, j=2 ..m=k)}^{n} P(A_i \cap A_j \cap .. A_m) = \frac{(n-k)!}{n!}.\frac{n!}{(n-k)!}.\frac{1}{k!}
+$$
+
+$$
+\sum_{(i \lt j \lt .. \lt m) and (i=1, j=2 ..m=k)}^{n} P(A_i \cap A_j \cap .. A_m) = \frac{1}{k!}
+$$
+
+The final inclusion exclusion summation will be:
+
+$$
+P(A_1 \cup A_2 \cup .. A_n) = 1 - \frac{1}{2!} + \frac{1}{3!} - .. (-1)^{(n+1)}\frac{1}{n!}
+$$
+
+Using the taylor series can be apporximated to 
+
+$$
+P(A_1 \cup A_2 \cup .. A_n) = 1 - e^{-1}
+$$
 
 # Mathematics Review
 
