@@ -141,7 +141,7 @@ $$
 P(A_1 \cup A_2 \cup .. A_n) = 1 - \frac{1}{2!} + \frac{1}{3!} - .. (-1)^{(n+1)}\frac{1}{n!}
 $$
 
-Using the taylor series can be apporximated to 
+Using the taylor series can be approximated to 
 
 $$
 P(A_1 \cup A_2 \cup .. A_n) = 1 - e^{-1}
