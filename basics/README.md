@@ -149,6 +149,34 @@ $$
 
 
 ## Independence
+### Definition
+Two events are independent if the satisfy the following condition
+
+$$
+P(A \cap B) = P(A)P(B)
+$$
+
+This is different than disjoint since there is a dependence between A and B if they are disjoint. For example: If A occurs then B does not occur. Hence not independent.
+
+For more than one events the following have to be true
+
+$$
+P(A \cap B \cap C)=P(A)P(B)P(C)
+$$
+
+$$
+P(A \cap B)=P(A)P(B)
+$$
+
+$$
+P(A \cap C)=P(A)P(C)
+$$
+
+$$
+P(B \cap C)=P(B)P(C)
+$$
+
+### Newton Pepy's Problem
 
 # Mathematics Review
 
