@@ -17,10 +17,10 @@ This is a naive definition that assumes all outcomes are equally likely and it i
 
 ## How do we count?
 ### Multiplication rule
-If there are $n_1$ outcomes from expeirment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
+If there are $n_1$ outcomes from experiment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
 
 **Example**
-If you have ice-cream with two things to experiment. Once is choose a cone and the second choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
+If you have ice-cream with two things to experiment. One is to choose a cone and the second is to choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
 
 | Choice of Cone | Choice of Flavor |
 |----------------|------------------|
@@ -177,6 +177,10 @@ P(B \cap C)=P(B)P(C)
 $$
 
 ### Newton Pepy's Problem
+**Problem statement**: What are the probabilities for
+* Getting at least 1 six in 6 independent die
+* Getting at least 2 sixes in 12 independent die
+* Getting at least 3 sixes in 18 independent die
 
 # Mathematics Review
 
