@@ -192,7 +192,7 @@ For six die, since the die are fair and the roll of the die is independent the p
 $$P(E=at \textunderscore least \textunderscore one \textunderscore six)=1 - (\frac{5}{6})^6$$
 
 **Case 2**
-For 12 die the probability the complement is the probability that we donot get a six and we do not get at least one six
+For 12 die the probability the complement is the probability that we donot get a six and **we get exactly one six**
 $$P((E=at \textunderscore least \textunderscore two \textunderscore six)^c)=(\frac{5}{6})^6  + ^{12}C_1 . ((\frac{1}{6}) . (\frac{5}{6})^{11})$$
 
 Hence the probability of getting at least two sixes in a 12 die experiment is
