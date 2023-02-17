@@ -192,17 +192,17 @@ For six die, since the die are fair and the roll of the die is independent the p
 $$P(E=at \textunderscore least \textunderscore one \textunderscore six)=1 - (\frac{5}{6})^6$$
 
 **Case 2**
-For 12 die the probability the complement is the probability that we get at least one six
-$$P((E=at \textunderscore least \textunderscore two \textunderscore six)^c)=^nC_r . ((\frac{1}{6}) . (\frac{5}{6})^{11})$$
+For 12 die the probability the complement is the probability that we donot get a six and we do not get at least one six
+$$P((E=at \textunderscore least \textunderscore two \textunderscore six)^c)=\frac{5}{6})^6  + ^{12}C_1 . ((\frac{1}{6}) . (\frac{5}{6})^{11})$$
 
 Hence the probability of getting at least two sixes in a 12 die experiment is
 
-$$P((E=at \textunderscore least \textunderscore two \textunderscore six))=1 - ^{12}C_1 . (\frac{1}{6}) . (\frac{5}{6})^{11}$$
+$$P((E=at \textunderscore least \textunderscore two \textunderscore six))=1 - \frac{5}{6})^6  - ^{12}C_1 . (\frac{1}{6}) . (\frac{5}{6})^{11}$$
 
 **Case 3**
 We can generalize case 3 as
 
-$$P(E=at \textunderscore least \textunderscore two \textunderscore six)=1 - \sum_{k=1}^2 (^nC_k . ((\frac{1}{6}^k) . (\frac{5}{6})^{18-k}))$$
+$$P(E=at \textunderscore least \textunderscore two \textunderscore six)=1 - \sum_{k=0}^2 (^nC_k . ((\frac{1}{6}^k) . (\frac{5}{6})^{18-k}))$$
 
 
 # Mathematics Review
