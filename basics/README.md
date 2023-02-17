@@ -182,6 +182,19 @@ $$
 * Getting at least 2 sixes in 12 independent die
 * Getting at least 3 sixes in 18 independent die
 
+**Solution**
+Let $E$ be the event we get a six. Our general strategy is to find the complement of the desired outcomes with the different die sets.
+**Case 1**
+For a single die the probability of not getting a six is
+$$P(E^{c})=frac{5}{6}$$ 
+For six die, since the die are fair and the roll of the die is independent the probability of not getting a single six with six die is $(\frac{5}{6})^6$. Hence the probability 
+
+$$P(E=at \textunderscore least \textunderscore one \textunderscore six)=1 - (\frac{5}{6})^6$$
+
+**Case 2**
+For two die the probability of not getting a six is
+
+
 # Mathematics Review
 
 ## The beauty of e
