@@ -202,7 +202,7 @@ $$P((E=at \textunderscore least \textunderscore two \textunderscore six))=1 - (\
 **Case 3**
 We can generalize case 3 as
 
-$$P(E=at \textunderscore least \textunderscore two \textunderscore six)=1 - \sum_{k=0}^2 (^nC_k . ((\frac{1}{6}^k) . (\frac{5}{6})^{18-k}))$$
+$$P(E=at \textunderscore least \textunderscore three \textunderscore six)=1 - \sum_{k=0}^2 (^nC_k . ((\frac{1}{6}^k) . (\frac{5}{6})^{18-k}))$$
 
 
 # Mathematics Review
