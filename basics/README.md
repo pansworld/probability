@@ -96,8 +96,8 @@ $$
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
 $$
 
-For three $A_1,A_2,A_3$ we can define it is 
-The 
+For three $A_1,A_2,A_3$ we can define it as 
+
 $$
 P(A_1 \cup A_2 \cup A_3) = P(A_1) + P(A_2) + P(A_3) - P(A_1 \cap A_2) - P(A_1 \cap A_3) - P(A_2 \cap A_3) + P(A_1 \cap A_2 \cap A_3)
 $$
@@ -251,6 +251,9 @@ $$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_n | A_1 \cap A_2 \cap .. A_{n-1})P(A_1
 $$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_n | A_1 \cap A_2 \cap .. A_{n-1})P(A_{n-1} | A_1 \cap A_2 \cap .. A_{n-2})P(A_1 \cap A_2 \cap .. A_{n-2})$$
 
 $$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_n | A_1 \cap A_2 \cap .. A_{n-1})P(A_{n-1} | A_1 \cap A_2 \cap .. A_{n-2}) ... P(A_2 | A_1)P(A_1)$$
+
+$$P(A_1 \cap A_2 \cap ... \cap A_n) = \prod_{i=1}^{k} P( A_k | \cap_{j=1}^{k-1} A_j )$$
+
 
 # Mathematics Review
 
