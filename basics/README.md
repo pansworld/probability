@@ -20,7 +20,7 @@ This is a naive definition that assumes all outcomes are equally likely and it i
 If there are $n_1$ outcomes from experiment 1 and for each outcome of experiement 1 we have $n_2$ outcomes for experiment 2 and consequenty after $r-1$ experiments we have $n_r$ outcomes then the total overall possible outcomes of all the combined experiments are $n_1\*n_2\*n_3...*n_r$
 
 **Example**
-If you have ice-cream with two things to experiment. One is to choose a cone and the second is to choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry. The total number of outcomes for all choices is 6 as shown below:
+If you have ice-cream with two things to experiment. One is to choose a cone (2 outcomes) and the second is to choose a flavor. You can get the ice cream with or without cone in three flavors which is vanilla, chocolate and strawberry (3 outcomes). The total number of outcomes for all choices is 6 as shown below:
 
 | Choice of Cone | Choice of Flavor |
 |----------------|------------------|
