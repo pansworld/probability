@@ -177,21 +177,27 @@ P(B \cap C)=P(B)P(C)
 $$
 
 ### Newton Pepy's Problem
-**Problem statement**: What are the probabilities for
+**Problem statement**: 
+
+What are the probabilities for
 * Getting at least 1 six in 6 independent die
 * Getting at least 2 sixes in 12 independent die
 * Getting at least 3 sixes in 18 independent die
 
 **Solution**
+
 Let $E$ be the event we get a six. Our general strategy is to find the complement of the desired outcomes with the different die sets.
+
 **Case 1**
+
 For a single die the probability of not getting a six is
-$$P(E^{c})=frac{5}{6}$$ 
+$$P(E^{c})=\frac{5}{6}$$ 
 For six die, since the die are fair and the roll of the die is independent the probability of not getting a single six with six die is $(\frac{5}{6})^6$. Hence the probability 
 
 $$P(E=at \textunderscore least \textunderscore one \textunderscore six)=1 - (\frac{5}{6})^6$$
 
 **Case 2**
+
 For 12 die the probability the complement is the probability that we donot get a six and **we get exactly one six**
 $$P((E=at \textunderscore least \textunderscore two \textunderscore six)^c)=(\frac{5}{6})^6  + ^{12}C_1 . ((\frac{1}{6}) . (\frac{5}{6})^{11})$$
 
@@ -200,10 +206,51 @@ Hence the probability of getting at least two sixes in a 12 die experiment is
 $$P((E=at \textunderscore least \textunderscore two \textunderscore six))=1 - (\frac{5}{6})^6  - ^{12}C_1 . (\frac{1}{6}) . (\frac{5}{6})^{11}$$
 
 **Case 3**
+
 We can generalize case 3 as
 
 $$P(E=at \textunderscore least \textunderscore three \textunderscore six)=1 - \sum_{k=0}^2 (^nC_k . ((\frac{1}{6}^k) . (\frac{5}{6})^{18-k}))$$
 
+## Conditional Probability
+How should you **update your belief / probability / undertainty** based on new evidence?
+
+**Notation**
+
+A conditional probability is specified as $P(A | B)$ which is read as the probability of A given B has occurred.
+
+**Intuition**
+
+Consider 9 pebbles in a box. Consider we define 4 pebbles as event B occurring and 5 pebbles as event A occurring. We assume that the total of all 9 pebbles is 1 unit. There is one overlapping pebble between A and B. Per the definition of conitional probability of we consider only the pebbles in event B (or B has occured) then all the other 5 pebbles are no longer considered to be part of the event space or the event space shrinks to the 4 pebbles the signify event B. The pebbles for A is now reduced to the 1 pebble that overlaps with B. 
+
+$$P(A | B)=\frac{1}{4}$$
+
+$$P(A | B)=\frac{\frac{1}{9}}{\frac{4}{9}}$$
+
+$$P(A | B)=\frac{P(A \cap B)}{P(B)}$$
+
+**Bayes Rule**
+
+Consider,
+
+$$P(A \cap B)=P(A | B)P(B)$$
+
+$$P(B \cap A)=P(B | A)P(A)$$
+
+Since $P(A \cap B)=P(B \cap A)$ we can write
+
+$$P(A | B)P(B)=P(B | A)P(A)$$
+
+$$P(A | B)=\frac{P(B | A)P(B)}{P(A)}$$
+
+**Chain Rule**
+
+Using Bayes rule for $n$ events we can write the intersection of events as
+
+$$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_n | A_1 \cap A_2 \cap .. A_{n-1})P(A_1 \cap A_2 \cap .. A_{n-1})$$
+
+$$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_n | A_1 \cap A_2 \cap .. A_{n-1})P(A_{n-1} | A_1 \cap A_2 \cap .. A_{n-2})P(A_1 \cap A_2 \cap .. A_{n-2})$$
+
+$$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_n | A_1 \cap A_2 \cap .. A_{n-1})P(A_{n-1} | A_1 \cap A_2 \cap .. A_{n-2}) ... P(A_2 | A_1)P(A_1)$$
 
 # Mathematics Review
 
