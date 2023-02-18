@@ -125,7 +125,7 @@ The denominator $n!$ since the total number of outcomes is the permutation of ar
 
 Now we use the expansion. Notice that each summation contains a list of intersections which are non-repeating and order does not matter. For example $P(A_1 \cap A_2) = P(A_2 \cap A_1)$. Hence the $k_th$ summation term a choice of $k$ events from $n$ events or $^nC_k$ or $\frac{n!}{(n-k)!}.\frac{1}{k!}$
 
-The $k_th$ term of the inclusion exclusion can be given as
+The $k_{th}$ term of the inclusion exclusion can be given as
 
 $$
 \sum_{(i \lt j \lt.. \lt m) and (i=1, j=2 ..m=k)}^{n} P(A_i \cap A_j \cap .. A_m) = \frac{(n-k)!}{n!}.\frac{n!}{(n-k)!}.\frac{1}{k!}
