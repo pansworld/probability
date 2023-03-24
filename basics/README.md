@@ -256,6 +256,13 @@ $$P(A_1 \cap A_2 \cap ... \cap A_n) = \prod_{i=1}^{k} P( A_k | \cap_{j=1}^{k-1} 
 
 ## Law of Total Probability 
 
+The law of total proability relates marginal proability to conditional probabilities. Consider the following. We have a sample space $S$ with events $B$. The sample space is also partitioned into events $A_1$,$A_2$,$A_3$...$A_n$ which also interset with B. Theb the marginal probability $P(B)$ is given as
+
+$$
+P(B) = \sum_{k=1}^{n} P(B | A_k)
+$$
+
+
 # Mathematics Review
 
 ## The beauty of e
