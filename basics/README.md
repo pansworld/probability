@@ -262,6 +262,30 @@ $$
 P(B) = \sum_{k=1}^{n} P(B | A_k)
 $$
 
+## Example illustrating why conditional probabilities are important
+
+We are dealt two cards.
+
+**Problem Statement 1**
+What is the probability that we have two aces given that the first card is an case $P(\text{two aces} | \text{have an ace})$?
+
+$$ 
+P(\text{two aces} | \text{first card is an ace}) = \frac{P(\text{two aces} \cap \text{first card is an ace})}{P(\text{have an ace})}
+$$
+
+$P(\text{two aces} \cap \text{first card is an ace})$ is the same as having two aces or $P(\text{two aces})$
+
+$$ 
+P(\text{two aces} | \text{first card is an ace}) = \frac{P(\text{two aces})}{P(\text{have an ace})}
+$$
+
+4 choose 2/ 52 choose 2
+We do not have a ace do the complement 1 - 48 choose 2 / 58 choose 2
+
+
+
+**Problem Statement 2**
+What is the proability that the second card is an ace given that the first card is an ace of spades $P(two"_"aces | first card is an ace of spade)$?
 
 # Mathematics Review
 
