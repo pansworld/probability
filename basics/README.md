@@ -270,25 +270,33 @@ We are dealt two cards.
 What is the probability that we have two aces given that the first card is an case $P(\text{two aces} | \text{have an ace})$? We are going to assume that ordering is not important. "Have an ace" can be seen as "at least one card is an ace"
 
 $$ 
-P(\text{two aces} | \text{first card is an ace}) = \frac{P(\text{two aces} \cap \text{first card is an ace})}{P(\text{have an ace})}
+P(\text{two aces} | \text{have an ace}) = \frac{P(\text{two aces} \cap \text{first card is an ace})}{P(\text{have an ace})}
 $$
 
-$P(\text{two aces} \cap \text{first card is an ace})$ is the same as having two aces or $P(\text{two aces})$
+$P(\text{two aces} \cap \text{have an ace})$ is the same as having two aces or $P(\text{two aces})$
 
 $$ 
-P(\text{two aces} | \text{first card is an ace}) = \frac{P(\text{two aces})}{P(\text{have an ace})}
-$$
-
-$$ 
-P(\text{two aces} | \text{first card is an ace}) = \frac{P(\text{two aces})}{1 - P(\text{we do not have an ace})}
+P(\text{two aces} | \text{have an ace}) = \frac{P(\text{two aces})}{P(\text{have an ace})}
 $$
 
 $$ 
-P(\text{two aces} | \text{first card is an ace}) =  \frac{\frac{^4C_2}{^52C_2}}{1 - \frac{^48C_2}{^52C_2}}
+P(\text{two aces} | \text{have an ace}) = \frac{P(\text{two aces})}{1 - P(\text{we do not have an ace})}
+$$
+
+$$ 
+P(\text{two aces} | \text{have an ace}) =  \frac{\frac{^4C_2}{^52C_2}}{1 - \frac{^48C_2}{^52C_2}} = \frac{1}{33}
 $$
 
 **Problem Statement 2**
-What is the proability that the second card is an ace given that the first card is an ace of spades $P(two"_"aces | one of the cards is an ace of spade)$?
+What is the proability that the second card is an ace given that the once of the cards is an ace of spades $P(two aces | one of the cards is an ace of spade)$?
+
+We have assumed that order does not matter we have to choose from 3 aces (since we know that one card is already known) and we have to choose from 51 cards.
+
+$$
+$P(two aces | one of the cards is an ace of spade)$ = \frac{3}{51} = \frac{1}{17}
+$$
+
+**Insight**: Knowing that the card that we have is an ace of spade rather than one of the cards is an ace doubles the probability of the second card being an ace. Essentially, the more evidence the more we know about the probability of an outcome. That is why conditioning is important. It is also important to know what to condition on. It is a fallacy to think that $P(A|B) \ne P(B|A)$.
 
 # Mathematics Review
 
