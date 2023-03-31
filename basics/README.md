@@ -280,7 +280,7 @@ P(\text{two aces} | \text{have an ace}) = \frac{P(\text{two aces})}{P(\text{have
 $$
 
 $$ 
-P(\text{two aces} | \text{have an ace}) = \frac{P(\text{two aces})}{1 - P(\text{we do not have an ace})}
+P(\text{two aces} | \text{have an ace}) = \frac{P(\text{two aces})}{1 - P(\text{**do not** have an ace})}
 $$
 
 $$ 
@@ -296,7 +296,45 @@ $$
 $P(two aces | one of the cards is an ace of spade)$ = \frac{3}{51} = \frac{1}{17}
 $$
 
-**Insight**: Knowing that the card that we have is an ace of spade rather than one of the cards is an ace doubles the probability of the second card being an ace. Essentially, the more evidence the more we know about the probability of an outcome. That is why conditioning is important. It is also important to know what to condition on. It is a fallacy to think that $P(A|B) \ne P(B|A)$.
+**Insight:** Knowing that the card that we have is an ace of spade rather than one of the cards is an ace doubles the probability of the second card being an ace. Essentially, the more evidence the more we know about the probability of an outcome. That is why conditioning is important. It is also important to know what to condition on. It is a fallacy to think that $P(A|B) = P(B|A)$. **In fact, $P(A|B) \ne P(B|A)$ but they are related by Bayes rule.**
+
+
+### Example illustrating why how conditional probabilities impact the outcome
+Suppose that 1% of the population have a disease. A test for the disease is 95% accurate. If a person gets a positive result, then what is the probability that they have the disease. 
+
+Let,
+
+$T$: event that the test result is positive.
+
+$T^c$: event that the test result is negative
+
+$D$: event that the person has the disease
+
+$D^c$: event that the perons does not have the disease
+
+We are interested in finding $P(D|T)$. We start with the Bayes rule
+
+$$
+P(D|T) = \frac{P(T|D)P(D)}{P(T)}
+$$
+
+By law of total probability
+
+$$
+P(T) = P(T|D)P(D) + P(T|D^c)P(D^c)
+$$
+
+Hence,
+
+$$
+P(D|T) = \frac{P(T|D)P(D)}{P(T|D)P(D) + P(T|D^c)P(D^c)}
+$$
+
+$$
+P(D|T) = \frac{0.95 \cdot 0.01}{0.95 \cdot 0.01 + 0.05 \cdot 0.99} = 0.16
+$$
+
+Or there is a 16% probability that if the test is positive the person has the rare disease. Most people focus on $P(T|D)$ but ignore the fact that the disease itself is rare $P(D)=0.01$ and how it plays into the overall probability. 
 
 # Mathematics Review
 
