@@ -296,7 +296,29 @@ $$
 $P(two aces | one of the cards is an ace of spade)$ = \frac{3}{51} = \frac{1}{17}
 $$
 
-**Insight:** Knowing that the card that we have is an ace of spade rather than one of the cards is an ace doubles the probability of the second card being an ace. Essentially, the more evidence the more we know about the probability of an outcome. That is why conditioning is important. It is also important to know what to condition on. It is a fallacy to think that $P(A|B) = P(B|A)$. **In fact, $P(A|B) \ne P(B|A)$ but they are related by Bayes rule.**
+**Insight:** Knowing that the card that we have is an ace of spade rather than one of the cards is an ace doubles the probability of the second card being an ace. Essentially, the more evidence the more we know about the probability of an outcome. That is why conditioning is important. It is also important to know what to condition on. It is a fallacy to think that $P(A|B) = P(B|A)$. **In fact, $P(A|B) \ne P(B|A)$ but they are related by Bayes rule.** 
+
+**Probability of innocence given the evidence**
+
+Assume that there is a theft.  The thief is described as a male, $5^{'}6^{"}$ in height and is read headed. The prosecution catches a person and claims that there is a $\frac{1}{50000}$ chance that a person matching this description is innocent. Hence he must be guilty.
+
+$$
+P(male, 5^{'}6^{"} in height | innocence) = \frac{1}{50,0000}
+$$
+
+What we are really interested in is 
+
+$$
+P(innocence | male, 5^{'}6^{"} in height ) = \frac{P(innocence \cap male, 5^{'}6^{"} in height)}{P(male, 5^{'}6^{"} in height)}
+$$
+
+$$
+P(innocence | male, 5^{'}6^{"} in height ) = \frac{P(male, 5^{'}6^{"} in height | innocence)P(innocence)}{P(male, 5^{'}6^{"} in height)}
+$$
+
+$P(innocence) \approx 1$ and $P(male, 5^{'}6^{"} in height)$ is likely to be low given the number of people in the city etc., the $P(innocence | male, 5^{'}6^{"} in height )$ is likely to be high. The prosecutor's fallacy ignores the prior probabilites and assumes $P(A|B) = P(B|A)$
+
+**Note:** $P(A)$ is call the prior probability and $P(A | B)$ is the posterior probability given that the event $B$ has occurred.
 
 
 ### Example illustrating why how conditional probabilities impact the outcome
@@ -335,6 +357,34 @@ P(D|T) = \frac{0.95 \cdot 0.01}{0.95 \cdot 0.01 + 0.05 \cdot 0.99} = 0.16
 $$
 
 Or there is a 16% probability that if the test is positive the person has the rare disease. Most people focus on $P(T|D)$ but ignore the fact that the disease itself is rare $P(D)=0.01$ and how it plays into the overall probability. 
+
+## Conditional Independence
+Two events $A$ and $B$ are said to be conditionally independent give that even $C$ occurred if:
+
+$$
+P(A \cap B | C) = P(A)P(B)
+$$
+
+### Are A and B independent if their conditional probabilities given C are independent?
+You are playing chess with a person. You play a few games and you have an idea of the strength of the person. Given then you know their strengths each game is now conditionally independent. But unconditionally, especially in the beginning the games are not independent since each game informs you about the strength of the person.
+
+Summarizing...
+$$
+P(Game_1, Game_2 | known strength) = P(Game_1)P(Game_2)
+$$
+
+But 
+$$
+P(Game_1, Game_2) \ne P(Game_1)P(Game_2)
+$$
+Since outcome of $Game_1$ give you more knowledge about the person and you are likely to change how you play $Game_2$
+
+### Given that A and B are independent are they conditionally independent given C?
+Suppose a fire alarm ($C$) can go off because of a fire ($A$) or someone making food ($B$). The $P(Fire)$ and $P(Someone making food)$ is independent. But they are conditionally dependent given that the Alarm goes off. For example to explain the proability of fire $P(A | C \cap B^{c}) = 1$ or the fire can be explained as alarm and no one is making food.  
+
+### Monty Hall problem
+
+
 
 # Mathematics Review
 
