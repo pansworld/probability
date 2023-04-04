@@ -256,7 +256,7 @@ $$P(A_1 \cap A_2 \cap ... \cap A_n) = \prod_{i=1}^{k} P( A_k | \cap_{j=1}^{k-1} 
 
 ### Law of Total Probability 
 
-The law of total proability relates marginal proability to conditional probabilities. Consider the following. We have a sample space $S$ with events $B$. The sample space is also partitioned into events $A_1,A_2,A_3...A_n$ which also interset with $B$. Theb the marginal probability $P(B)$ is given as
+The law of total proability relates marginal proability to conditional probabilities. Consider the following. We have a sample space $S$ with events $B$. The sample space is also partitioned into events $A_1,A_2,A_3...A_n$ which also interset with $B$. The the marginal probability $P(B)$ is given as
 
 $$
 P(B) = \sum_{k=1}^{n} P(B | A_k)
@@ -383,8 +383,23 @@ Since outcome of $Game_1$ give you more knowledge about the person and you are l
 Suppose a fire alarm ($C$) can go off because of a fire ($A$) or someone making food ($B$). The $P(Fire)$ and $P(Someone making food)$ is independent. But they are conditionally dependent given that the Alarm goes off. For example to explain the proability of fire $P(A | C \cap B^{c}) = 1$ or the fire can be explained as alarm and no one is making food.  
 
 ### Monty Hall problem
+The setup. There are three doors. There is a car behind one door and two goats behind the other two. You choose one door. Monty Hall then opens one of the other two doors and asks if you want to switch. The question what should be your strategy. Should you switch? The following conditions are assumed:
+
+- Monty Hall knows which door has the car
+- Monty Hall will open the door which does not have the car
+- If both doors do not have the car then Monty Hall is likely to open the door with equal probability
+
+To determine our strategy we need to find the probability that the car is behind one of the other two doors. Let's assume that we always choose door 1. The prior probability after we choose door 1 for each door is $\frac{1}{3}$
+
+Law of total probability
+P(switching) = P(switch|car=door1)P(door1) + P(switch|car=door2)P(door2) + P(switch|car=door3)P(door3)
+P(switching) = 0 + 1/3 + 1/3
+
+Using graphical analysis
 
 
+
+### Simpsons Paradox
 
 # Mathematics Review
 
