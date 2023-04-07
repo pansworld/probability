@@ -366,18 +366,21 @@ P(A \cap B | C) = P(A)P(B)
 $$
 
 ### Are A and B independent if their conditional probabilities given C are independent?
-You are playing chess with a person. You play a few games and you have an idea of the strength of the person. Given then you know their strengths each game is now conditionally independent. But unconditionally, especially in the beginning the games are not independent since each game informs you about the strength of the person.
+You are playing chess with a person. You play a few games and you have an idea of the strength of the person. Given then you know their strengths each game is now conditionally independent, since you already know the player well. But unconditionally, especially in the beginning the games are not independent since each game informs you about the strength of the person.
 
 Summarizing...
+
 $$
 P(Game_1, Game_2 | known strength) = P(Game_1)P(Game_2)
 $$
 
 But 
+
 $$
 P(Game_1, Game_2) \ne P(Game_1)P(Game_2)
 $$
-Since outcome of $Game_1$ give you more knowledge about the person and you are likely to change how you play $Game_2$
+
+Since outcome of $Game_1$ gives you more knowledge about the person and you are likely to change how you play $Game_2$.
 
 ### Given that A and B are independent are they conditionally independent given C?
 Suppose a fire alarm ($C$) can go off because of a fire ($A$) or someone making food ($B$). The $P(Fire)$ and $P(Someone making food)$ is independent. But they are conditionally dependent given that the Alarm goes off. For example to explain the proability of fire $P(A | C \cap B^{c}) = 1$ or the fire can be explained as alarm and no one is making food.  
@@ -391,11 +394,21 @@ The setup. There are three doors. There is a car behind one door and two goats b
 
 To determine our strategy we need to find the probability that the car is behind one of the other two doors. Let's assume that we always choose door 1. The prior probability after we choose door 1 for each door is $\frac{1}{3}$
 
-Law of total probability
-P(switching) = P(switch|car=door1)P(door1) + P(switch|car=door2)P(door2) + P(switch|car=door3)P(door3)
-P(switching) = 0 + 1/3 + 1/3
 
-Using graphical analysis
+**Using Law of total probability**
+Let's assume that our strategy is to always switch. The by law of total probability the probability of switching can be written as
+
+$$
+P(switching) = P(switch|car=door1)P(door1) + P(switch|car=door2)P(door2) + P(switch|car=door3)P(door3)
+$$
+
+$$
+P(switching) = 0 + $\frac{1}{3}$ + $\frac{1}{3}$ = \frac{2}{3}
+$$
+
+**Using graphical analysis**
+
+
 
 
 
