@@ -417,7 +417,15 @@ P(C=1 | M=2) = \frac{1}{2}.\frac{1}{3} = \frac{1}{6}
 $$
 
 $$
+P(C=1 | M=3) = \frac{1}{2}.\frac{1}{3} = \frac{1}{6}
+$$
+
+$$
 P(C=3 | M=2) = 1.\frac{1}{3} = \frac{1}{3}
+$$
+
+$$
+P(C=2 | M=3) = 1.\frac{1}{3} = \frac{1}{3}
 $$
 
 We renormalize to get $P(C)=1$ by multiplying it with 2 ($\frac{1}{\frac{1}{2}}$). Hence,
