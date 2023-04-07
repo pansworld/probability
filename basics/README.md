@@ -428,7 +428,7 @@ $$
 P(C=2 | M=3) = 1.\frac{1}{3} = \frac{1}{3}
 $$
 
-We renormalize to get $P(C)=1$ by multiplying it with 2 ($\frac{1}{\frac{1}{2}}$). Hence,
+We renormalize to get $P(C)=1$ by multiplying P(C=1 | M=2) and P(C=3 | M=2) with 2 ($\frac{1}{\frac{1}{2}}$). Hence,
 
 $$
 P(C=1 | M=2) = \frac{1}{3}
