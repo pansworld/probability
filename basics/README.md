@@ -413,33 +413,21 @@ $$
 Looking at the diagram if Monty Hall opens door 
 
 $$
+P(C=1 | M=2) = \frac{1}{2}.\frac{1}{3} = \frac{1}{6}
+$$
 
-TODO
-P(C=1) = 1/3
-P(C=2) = 1/3
-P(C=3) = 1/3
+$$
+P(C=3 | M=2) = 1.\frac{1}{3} = \frac{1}{3}
+$$
 
-P(M=2|C=1) = 1/2
-P(M=3|C=1) = 1/2
+We renormalize to get $P(C)=1$ by multiplying it with 2 ($\frac{1}{\frac{1}{2}}$). Hence,
 
-P(M=2|C=2) = 0
-P(M=2|C=3) = 1
-P(M=3|C=2) = 1
-P(M=3|C=3) = 0
+$$
+P(C=1 | M=2) = \frac{1}{3}
+$$
 
-
-P(C=1|M=2) = P(C=1, M=2)/P(M=2) = P(M=2 | C=1)P(C=1)/P(M=2)
-P(C=2|M=2) = P(M=2|C=2)P(C=2)/P(M=2)
-
-P(C=1|M=2) = 1/2*1/3/P(M=2)
-P(C=2|M=2) = 1*1/3/P(M=2)
-
-P(M=2) = P(M=2 | C=1)*P(C=1) + P(M=2 | C=3)*P(C=3)
-P(M=2) = 1/6*1/3 + 1/3*1/3 = 1/3(1/3+1/6)=1/3*1/2=1/6
-
-We renormalize since there are only two outcomes 
-
-
+$$
+P(C=3 | M=2) = \frac{2}{3}
 $$
 
 
