@@ -428,7 +428,7 @@ $$
 P(C=2 | M=3) = 1.\frac{1}{3} = \frac{1}{3}
 $$
 
-We renormalize to get $P(C)=1$ by multiplying P(C=1 | M=2) and P(C=3 | M=2) with 2 ($\frac{1}{\frac{1}{2}}$). Hence,
+We renormalize since we are conditioning on partial outcomes by multiplying P(C=1 | M=2) with 2 ($\frac{1}{\frac{1}{2}}$). Hence,
 
 $$
 P(C=1 | M=2) = \frac{1}{3}
@@ -440,6 +440,56 @@ $$
 
 
 ### Simpsons Paradox
+Consider the following example where we have two doctors. Dr. Hibbert and Dr. Nick
+
+| Result   |Dr. Hibbert Surgery  | Dr. Hibbert Band Aid |
+|----------|---------------------|----------------------|
+| Success  |                   70|                    10|
+| Failure  |                   20|                     0|
+
+
+| Result   |Dr. Nick Surgery     | Dr. Nick Band Aid    |
+|----------|---------------------|----------------------|
+| Success  |                    2|                    81|
+| Failure  |                    8|                     9|
+
+In the above case the success rate given surgery and band aid for each doctor is given by:
+
+$$
+P(Dr. Hibbert Success | Surgery) = \frac{7}{9}
+$$
+
+$$
+P(Dr. Hibbert Success | Band Aid) = \frac{10}{10}
+$$
+
+$$
+P(Dr. Nick Success | Surgey) = \frac{2}{10}
+$$
+
+$$
+P(Dr. Nick Success | Band Aid) = \frac{81}{90}
+$$
+
+Aggregating or unconditionally the probability of success for Dr. Hibbert and Dr. Nick are given as follows:
+
+$$
+P(Dr. Hibbert Success) = \frac{80}{100}
+$$
+
+
+$$
+P(Dr. Nick Success) = \frac{83}{100}
+$$
+
+The paradox is that given the overall success Dr. Nick might seem better than Dr. Hibbert but given under conditions Dr. Hibbert is clearly the better overall doctor. This is why conditioning is important. It the conditioning are also called "Control" parameters which gives important information about the probabilities. The intuition is that when we aggregate it we are doing the following:
+
+$$
+\frac{2}{5} + \frac{1}{3} \ne \frac{3}{8}
+$$
+
+**Note** From Lecture 5 of Harvard Stat 110.
+
 
 # Mathematics Review
 
