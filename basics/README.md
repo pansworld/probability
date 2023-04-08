@@ -482,11 +482,29 @@ $$
 P(Dr. Nick Success) = \frac{83}{100}
 $$
 
-The paradox is that given the overall success Dr. Nick might seem better than Dr. Hibbert but given under conditions Dr. Hibbert is clearly the better overall doctor. This is why conditioning is important. It the conditioning are also called "Control" parameters which gives important information about the probabilities. The intuition is that when we aggregate it we are doing the following:
-
+The paradox is that given the overall success Dr. Nick might seem better than Dr. Hibbert but given under conditions Dr. Hibbert is clearly the better overall doctor. This is why conditioning is important.
 $$
 \frac{2}{5} + \frac{1}{3} \ne \frac{3}{8}
 $$
+
+Let events defined as $A: Success$, $B: Nick$ and $C: Surgery$ then we get
+
+$$
+P(A | B, C) < P(A|B^c, C)
+$$
+
+$$
+P(A | B, C^c) < P(A|B^c, C^c)
+$$
+
+Aggregating the probabilities gives,
+
+$$
+P(A | B) > P(A|B^c)
+$$
+
+The ineqality flips when the condition on type of event $C$ is taken away. Here $C$ is called the $Confounder$. 
+
 
 **Note** From Lecture 5 of Harvard Stat 110.
 
