@@ -505,8 +505,15 @@ $$
 
 The ineqality flips when the condition on type of event $C$ is taken away. Here $C$ is called the $Confounder$. 
 
+By law of total probability,
 
-**Note** From Lecture 5 of Harvard Stat 110.
+$$
+P(A | B) = P(A | B,C)P(C|B) + P(A|B,C^c)P(C^c|B)
+$$
+
+Here $P(C|B)$ and $P(C^c|B)$ act was weights and we do not have a way of determining them.
+
+**Note** From Lecture 6 of Harvard Stat 110.
 
 
 # Mathematics Review
