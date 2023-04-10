@@ -511,7 +511,7 @@ $$
 P(A | B) = P(A | B,C)P(C|B) + P(A|B,C^c)P(C^c|B)
 $$
 
-Here $P(C|B)$ and $P(C^c|B)$ act was weights and we do not have a way of determining them.
+Here $P(C|B)$ and $P(C^c|B)$ act was weights and influence the outcome.
 
 **Note** From Lecture 6 of Harvard Stat 110.
 
