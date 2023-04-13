@@ -584,10 +584,6 @@ $$
 A = -B
 $$
 
-$$
-
-$$
-
 
 ### Random Variables
 Random variables is a fuction of events that maps to a real line.
