@@ -516,9 +516,9 @@ Here $P(C|B)$ and $P(C^c|B)$ act was weights and influence the outcome.
 **Note** From Lecture 6 of Harvard Stat 110.
 
 ### Gambler's ruin or Random Walk
-We have two gamblers $A$ and $B$ and each have $i$ and $N-i$ and $p$ is the probability of $A$ winning a round and $q=1-p$. The boundary conditions are either $A$ has 0 or N dollars which means that $A$ has either won or lost all of the money. 
+We have two gamblers $A$ and $B$ and each have $i$ and $N-i$ and $p$ is the probability of $A$ winning a round and $q=1-p$. The boundary conditions are either $A$ has 0 or N dollars which means that $A$ has either won or lost all of the money. When playing $A$ can have $i-1$ money with a probability $q$ amd $i+1$ with a probability $p$. With $i+1$ (and vice versa for $i-1$) $A$ can either lose the round and go back to $i$ or win and win and go to $i+2$. This continues until $A$ either loses all the money or wins all the money. Depending on the probability of winning each round $A$ may go back and forth until . Hence, random walk.
 
-Let $p_i$ be the proability of winning when $A$ has $i$ dollars and can be written as
+The probability $p_i$ of winning when $A$ has $i$ dollars and can be written as
 
 $$
 p_i = p_{i+1}.p + p_{i-1}.(1-p)
@@ -527,6 +527,67 @@ $$
 $$
 p_i = p_{i+1}.p + p_{i-1}.q
 $$
+
+To solve this let,
+
+$$
+p_i = x^{i}
+$$
+
+Hence we get
+
+$$
+x^{i} = x^{i+1}.p + x^{i-1}.q
+$$
+
+$$
+\implies p.x^{2} - x + q = 0
+$$
+
+Solving for x
+
+$$
+x = \frac{1 \pm \sqrt{1 - 4.p.q}}{2.p}
+$$
+
+$$
+x = \frac{1 \pm \sqrt{1 - 4.p.(1-p)}}{2.p}
+$$
+
+$$
+x = \frac{1 \pm \sqrt{1 - 4.p+ 4p^{2}}}{2.p}
+$$
+
+$$
+x = \frac{1 \pm \sqrt{(2p -1)^{2}}}{2.p}
+$$
+
+
+$$
+x \in {1, \frac{1-p}{p}}
+$$
+
+
+$$
+x \in {1, \frac{q}{p}}
+$$
+
+The general solution can be the linear combination of the roots
+
+$$
+p_i = A.1^{i} + B.(\frac{q}{p})^{i}
+$$
+
+Now solving for the boundary conditions 0 ($p_0=0$) and N ($p_N=1$) we get
+
+$$
+A = -B
+$$
+
+$$
+
+$$
+
 
 ### Random Variables
 Random variables is a fuction of events that maps to a real line.
