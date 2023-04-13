@@ -515,6 +515,21 @@ Here $P(C|B)$ and $P(C^c|B)$ act was weights and influence the outcome.
 
 **Note** From Lecture 6 of Harvard Stat 110.
 
+### Gambler's ruin or Random Walk
+We have two gamblers $A$ and $B$ and each have $i$ and $N-i$ and $p$ is the probability of $A$ winning a round and $q=1-p$. The boundary conditions are either $A$ has 0 or N dollars which means that $A$ has either won or lost all of the money. 
+
+Let $p_i$ be the proability of winning when $A$ has $i$ dollars and can be written as
+
+$$
+p_i = p_{i+1}.p + p_{i-1}.(1-p)
+$$
+
+$$
+p_i = p_{i+1}.p + p_{i-1}.q
+$$
+
+### Random Variables
+Random variables is a fuction of events that maps to a real line.
 
 # Mathematics Review
 
