@@ -613,8 +613,10 @@ $$
 and substituting $x=1$
 
 $$
-\lim_{x \to 1} \frac{i}{N}
+\lim_{x \to 1} \frac{1-x^i}{1-x^n} = \frac{i}{N}
 $$
+
+Hence in case p=q or the game is fair, as we play more and more games, the probability of winning will depend only on the money that you have $i$ and the total money $N$.
 
 ### Random Variables
 Random variables is a fuction of events that maps to a real line.
