@@ -569,8 +569,10 @@ $$
 
 
 $$
-x \in {1, \frac{q}{p}}
+x \in {1, \frac{q}{p}} 
 $$
+
+where $p \ne q$
 
 The general solution can be the linear combination of the roots
 
@@ -584,6 +586,35 @@ $$
 A = -B
 $$
 
+Substituting and solving
+
+$$
+A = \frac{1}{1 - (\frac{q}{p})^N}
+$$
+
+$$
+p_i = \frac{1 - (\frac{q}{p})^i}{1 - (\frac{q}{p})^N} 
+$$
+
+where $p \ne q$
+
+Now for the case where $p=q$, $p_i$ is of the form $\frac{0}{0}$. Let $x=\frac{q}{p}$ we want to calculate the 
+
+$$
+\lim_{x \to 1} \frac{1-x^i}{1-x^n}
+$$
+
+and applying  [L'Hopital's rule](https://www.youtube.com/watch?v=Hu0z-sFfF8Y) and differentiating the numerator and denominator w.r.t $x$
+
+$$
+\lim_{x \to 1} \frac{-i.x^{i-1}}{N.x^{N-1}}
+$$
+
+and substituting $x=1$
+
+$$
+\lim_{x \to 1} \frac{i}{N}
+$$
 
 ### Random Variables
 Random variables is a fuction of events that maps to a real line.
@@ -740,3 +771,4 @@ $$ x(t) = \int_{-\infty}^{\infty} x(i\omega) e^{-i\omega t} d\omega $$
 - [Stat 110 : Probability](https://www.youtube.com/watch?v=KbB0FjPg0mw&list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&index=1)
 - [Permutations and Combinations Review](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
 - [Desmos Graphing Calculator](https://www.desmos.com/calculator)
+- [Calculus 6.08g - An Intuitive Proof of l`Hopital`s Rule](https://www.youtube.com/watch?v=Hu0z-sFfF8Y)
