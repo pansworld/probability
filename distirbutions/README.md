@@ -200,13 +200,13 @@ A Bernoulli distribution captures the probabiliy of a binary outcome. It is repr
 The Probability Mass Function (PMF) for a Bernoulli distribution is give as 
 
 $$
-F(x;p) = p^x.(1-p)^{1-x} 
+f(x;p) = p^x.(1-p)^{1-x} 
 $$
 
 Alternatively the PMF can be represented as
 
 $$
-F(x;p) = p.x + p.(1-x)
+f(x;p) = p.x + p.(1-x)
 $$
 
 where,
