@@ -195,6 +195,32 @@ Hence $e^{ix \omega}$ is a moment generating function.
 
 ## Common Distribution Types
 #### Bernoulli (Discrete)
+A Bernoulli distribution captures the probabiliy of a binary outcome. It is represented as $Bern(p)$ where $p$ is the probability of a successful outcome and $q$ is the probability of an unsuccessful outcome where $q=1-p$.
+
+The Probability Mass Function (PMF) for a Bernoulli distribution is give as 
+
+$$
+F(x;p) = p^x.(1-p)^{1-x} 
+$$
+
+Alternatively the PMF can be represented as
+
+$$
+F(x;p) = p.x + p.(1-x)
+$$
+
+where,
+
+$$
+x \in {0,1}
+$$
+
+and
+
+$$
+p = P(X=1)
+$$
+
 
 
 #### Poisson (Discrete)
