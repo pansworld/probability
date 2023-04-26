@@ -221,7 +221,9 @@ $$
 p = P(X=1)
 $$
 
+#### Binomial (Discrete)
 
+#### Hypergeometric (Discrete)
 
 #### Poisson (Discrete)
 
