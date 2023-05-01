@@ -297,6 +297,12 @@ $$
 P(X_Y=k) = p^{(k)}.q^{(m+n-k)} \sum_{j=0}^{k} (^{m}C_{k-j}.^{n}C_{j})
 $$
 
+The last part is the [Vandermonde identity](https://en.wikipedia.org/wiki/Vandermonde%27s_identity)
+
+$$
+
+
+$$
 
 
 #### Hypergeometric (Discrete)
