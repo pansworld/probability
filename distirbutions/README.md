@@ -163,7 +163,7 @@ The fourth **central** moment  $(k=4)$ gives a measure of peakiness of the distr
 
 
 ### Characteristic function for Random Variables
-Characteristic functions are moment generating functions that can be used to analyze the characteristics (moments) of a random variable. A characteristic function uses Inverse Fourier Transform a analyze random variable in a different space. Each random variable generally has a unique characteristic function and it makes it easier to mathematically analyze combinations of characteristic functions rahter than PMFs or PDFs.
+Characteristic functions are moment generating functions that can be used to analyze the characteristics (moments) of a random variable. A characteristic function uses Inverse Fourier Transform a analyze random variable in a different space. Each random variable generally has a unique characteristic function and it makes it easier to mathematically analyze combinations of characteristic functions rather than PMFs or PDFs.
 
 The characteristic function uses the Inverse Fourier transform to represent the random variable as:
 
@@ -262,9 +262,40 @@ $$
 = (p + 1 - p)^n = 1
 $$
 
-We can also prove that we can combine $X \sim Bin(n,p)$ and $X \sim Bin(m,p)$ to $X \sim Bin(n+m,p)$. This is known as a convolution. By convention if we have n i.i.d Bern(p) trials and m i.i.d Bern(p) trials then we have a total of n+m i.i.d Bern(p) trials. We are tossing the coin n+m times instead of n and m times. Since these are i.i.d events, each trial itself has not impact on any prior or future trial which allows us to combine them. This is known as **convolution**.
+We can also prove that we can combine $X \sim Bin(n,p)$ and $Y \sim Bin(m,p)$ to $X+Y \sim Bin(n+m,p)$. This is known as a convolution. By convention if we have n i.i.d Bern(p) trials and m i.i.d Bern(p) trials then we have a total of n+m i.i.d Bern(p) trials. We are tossing the coin n+m times instead of n and m times. Since these are i.i.d events, each trial itself has not impact on any prior or future trial which allows us to combine them. This is known as **convolution**.
 
-Mathematically,
+Mathematically to get he convolution we want to determine $P(X+Y=k)$. Here we assume that we already know X. They by law of total probability
+
+$$
+P(X+Y=k) = \sum_{j=0}^{k} P(X+Y=k | X=j) P(X=j)
+$$
+
+$$
+P(X+Y=k) = \sum_{j=0}^{k} P(j+Y=k | X=j) ^{n}C_{j}.p^j.q^{k-j}
+$$
+
+
+$$
+P(X+Y=k) = \sum_{j=0}^{k} P(j+Y=k | X=j) ^{n}C_{j}.p^j.q^{n-j}
+$$
+
+$$
+P(X+Y=k) = \sum_{j=0}^{k} P(Y=k-j | X=j) ^{n}C_{j}.p^j.q^{n-j}
+$$
+
+Since X and Y are i.i.d $P(Y=k-j | X=j) = P(Y=k-j)$
+
+$$
+P(X+Y=k) = \sum_{j=0}^{k} P(Y=k-j).^{n}C_{j}.p^j.q^{(n-j)}
+$$
+
+$$
+P(X_Y=k) = \sum_{j=0}^{k} (^{m}C_{k-j}.p^{(k-j)}.q^{(m-k+j)}).^{n}C_{j}.p^j.q^{n-j}
+$$
+
+$$
+P(X_Y=k) = p^{(k)}.q^{(m+n-k)} \sum_{j=0}^{k} (^{m}C_{k-j}.^{n}C_{j})
+$$
 
 
 
