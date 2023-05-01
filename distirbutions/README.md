@@ -304,7 +304,32 @@ P(X_Y=k) = p^{(k)}.q^{(m+n-k)}.^{m+n}C_{k}
 $$
 
 #### Hypergeometric (Discrete)
+The Binomial distribution captures distribution of i.i.d events or like shuffling a deck of cards where we pick a card and replace it back into the deck. But what about the successes of trials which are not i.i.d. where we pick a card and we do not replace it. Hypergeometric captures the distribution of the second case where the trials are without replacement. 
 
+**Example:**
+We have $w$ white marbles and $b$ black marbles. We choose or sample $n$ marbles and find the probability $k$ marbles in the sample. $n$ represents the trials and $k$ represents the successes.
+
+The PMF of the above example is given by,
+
+$$
+f(x=k;n,w,b) =  \frac{^bC_k.^{w}C_{(n-k)}}{^{(w+b)}C_{n}}
+$$
+
+The sum of the PMF should be equal to 1. This can be show as,
+
+$$
+\sum_{k=0}^{n} \frac{^bC_k.^{w}C_{(n-k)}}{^{(w+b)}C_{n}}
+$$
+
+$$
+\frac{1}{^{(w+b)}C_{n}} \sum_{k=0}^{n} (^bC_k.^{w}C_{(n-k)})
+$$
+
+which by Vandermonde identity is
+
+$$
+\frac{1}{^{(w+b)}C_{n}}.(^{(w+b)}C_{n}) = 1
+$$
 
 #### Poisson (Discrete)
 
