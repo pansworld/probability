@@ -206,7 +206,7 @@ $$
 Alternatively the PMF can be represented as
 
 $$
-f(x;p) = p.x + p.(1-x)
+f(x;p) = p.x + (1-p).(1-x)
 $$
 
 where,
@@ -222,20 +222,54 @@ p = P(X=1)
 $$
 
 #### Binomial (Discrete)
-The Binomial distribution captures the proability of x successes in n independent bernoulli trails. Each trial probability success is given as $p$. The notation is Bin(n,p)
+The Binomial distribution captures the proability of x successes in n independent and indentically distributed (each trail has the same probability of sucess $p$) bernoulli trails. The notation is represented as $X \tilde Bin(n,p)$
 
 The PMF for k successes is given as
+
 $$
-f(x=k:n,p) = (\frac{n}{k})p^{k}.(1-p)^{(n-k)}
+f(x=k:n,p) = ^{n}C_{k}.p^{k}.(1-p)^{(n-k)}
 $$
 
 or it $q = 1-p$ then,
 
 $$
-f(x=k:n,p) = (\frac{n}{k})p^{k}.(q)^{(n-k)}
+f(x=k:n,p) = ^{n}C_{k}.p^{k}.(q)^{(n-k)}
 $$
 
+where 
+
+$$
+x \in {0,1,..n}
+$$
+
+and $k>0$
+
+We can prove the that the sum of all the probabilities given by the PMF is 1
+
+$$
+\sum_{k=0}^{n} (^{n}C_{k}.p^{k}.(q)^{(n-k)})
+$$
+
+The above is a Binomial expression for $(p+q)^n$
+
+Hence,
+
+$$
+= (p+q)^n
+$$
+
+$$
+= (p + 1 - p)^n = 1
+$$
+
+We can also prove that we can combine $X \sim Bin(n,p)$ and $X \sim Bin(m,p)$ to $X \sim Bin(n+m,p)$. This is known as a convolution. By convention if we have n i.i.d Bern(p) trials and m i.i.d Bern(p) trials then we have a total of n+m i.i.d Bern(p) trials. We are tossing the coin n+m times instead of n and m times. Since these are i.i.d events, each trial itself has not impact on any prior or future trial which allows us to combine them. This is known as **convolution**.
+
+Mathematically,
+
+
+
 #### Hypergeometric (Discrete)
+
 
 #### Poisson (Discrete)
 
