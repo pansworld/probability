@@ -222,6 +222,18 @@ p = P(X=1)
 $$
 
 #### Binomial (Discrete)
+The Binomial distribution captures the proability of x successes in n independent bernoulli trails. Each trial probability success is given as $p$. The notation is Bin(n,p)
+
+The PMF for k successes is given as
+$$
+f(x=k:n,p) = (\frac{n}{k})p^{k}.(1-p)^{(n-k)}
+$$
+
+or it $q = 1-p$ then,
+
+$$
+f(x=k:n,p) = (\frac{n}{k})p^{k}.(q)^{(n-k)}
+$$
 
 #### Hypergeometric (Discrete)
 
