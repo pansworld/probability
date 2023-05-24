@@ -221,9 +221,10 @@ $$
 p = P(X=1)
 $$
 
-** Expected Value **
+**Expected Value**
+
 $$
-E(X) = 1.p(X=1) + 0.X(X=0)
+E(X) = 1.p(X=1) + 0.p(X=0)
 $$
 
 or
