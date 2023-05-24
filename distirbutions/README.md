@@ -221,6 +221,19 @@ $$
 p = P(X=1)
 $$
 
+** Expected Value **
+$$
+E(X) = 1.p(X=1) + 0.X(X=0)
+$$
+
+or
+
+$$
+E(X) = p(X=1)
+$$
+
+Here X is considered an indicator variable. It acts as a bridge between Expected value and probability.
+
 #### Binomial (Discrete)
 The Binomial distribution captures the proability of x successes in n independent and indentically distributed (each trail has the same probability of sucess $p$) bernoulli trails. The notation is represented as $X \tilde Bin(n,p)$
 
