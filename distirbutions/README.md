@@ -318,6 +318,7 @@ P(X_Y=k) = p^{(k)}.q^{(m+n-k)}.^{m+n}C_{k}
 $$
 
 **Expected Value**
+
 The expected value of a Binomial distruibution can be give as:
 
 $$
