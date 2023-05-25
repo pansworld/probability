@@ -278,7 +278,7 @@ $$
 
 We can also prove that we can combine $X \sim Bin(n,p)$ and $Y \sim Bin(m,p)$ to $X+Y \sim Bin(n+m,p)$. This is known as a convolution. By convention if we have n i.i.d Bern(p) trials and m i.i.d Bern(p) trials then we have a total of n+m i.i.d Bern(p) trials. We are tossing the coin n+m times instead of n and m times. Since these are i.i.d events, each trial itself has not impact on any prior or future trial which allows us to combine them. This is known as **convolution**.
 
-Mathematically to get he convolution we want to determine $P(X+Y=k)$. Here we assume that we already know X. They by law of total probability
+Mathematically to get the convolution we want to determine $P(X+Y=k)$. Here we assume that we already know X. They by law of total probability
 
 $$
 P(X+Y=k) = \sum_{j=0}^{k} P(X+Y=k | X=j) P(X=j)
@@ -315,6 +315,41 @@ The last part is the [Vandermonde identity](https://en.wikipedia.org/wiki/Vander
 
 $$
 P(X_Y=k) = p^{(k)}.q^{(m+n-k)}.^{m+n}C_{k}
+$$
+
+**Expected Value**
+The expected value of a Binomial distruibution can be give as:
+
+$$
+E(X) = \sum_{k=0}^{n} k.^{n}C_{k}.p^{k}.q^{n-k}
+$$
+
+or since for $k=0$ the value is zero we can ignore the $0^{th}$ term
+
+$$
+E(X) = \sum_{k=1}^{n} k.^{n}C_{k}.p^{k}.q^{n-k}
+$$
+
+To solve this, we consider that $k.^{n}C_{k}$ can be written as $n.^{n-1}C_{k-1}$. Essentially this is like choosing a committee of $k$ from $n$ people and then choosing a president. We can alternatively choose a president and then choose a committed of $k-1$ people from $n-1$ people.
+
+$$
+E(X) = \sum_{k=1}^{n} n.^{n-1}C_{k-1}.p^{k}.q^{n-k}
+$$
+
+$$
+E(X) = n.p.\sum_{k=1}^{n} n.^{n-1}C_{k-1}.p^{k-1}.q^{n-k}
+$$
+
+Let $j = k - 1$ or $k=j+1$ we get,
+
+$$
+E(X) = n.p.\sum_{j=0}^{n} n.^{n-1}C_{j}.p^{j}.q^{n-1-j}
+$$
+
+The last term is summation of the binomial distribution and hence it is 1. 
+
+$$
+E(X) = n.p
 $$
 
 #### Hypergeometric (Discrete)
