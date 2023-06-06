@@ -381,6 +381,9 @@ $$
 \frac{1}{^{(w+b)}C_{n}}.(^{(w+b)}C_{n}) = 1
 $$
 
+
+#### Gemoetric (Discrete)
+
 #### Poisson (Discrete)
 
 #### Uniform (Continuous)
